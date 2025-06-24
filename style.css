@@ -105,7 +105,7 @@ footer.disclaimer {
   padding: 8px 12px;
   backdrop-filter: blur(4px); /* Softens the background behind text */
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Light glow for better contrast */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2); /* Light glow for better contrast */
   max-width: 90%;
   margin: 0 auto;
 }
