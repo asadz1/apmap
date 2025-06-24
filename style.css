@@ -75,7 +75,6 @@ nav {
 .navbar a:hover,
 .navbar a.active {
   background-color: transparent;
-  text-decoration: underline;
 }
 
 .navbar a::after {
