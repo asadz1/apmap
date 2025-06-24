@@ -134,3 +134,13 @@ nav {
   background-color: #1e4ddf;
 }
 
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #18397c; /* a more muted navy */
+}
+
+
