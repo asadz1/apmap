@@ -101,7 +101,7 @@ footer.disclaimer {
   text-align: center;
   font-size: 0.8rem;
   color: #333;
-  background: rgba(255, 255, 255, 0.7); /* Soft white see-through backdrop */
+  background: rgba(255, 255, 255, 0.5); /* Soft white see-through backdrop */
   padding: 8px 12px;
   backdrop-filter: blur(4px); /* Softens the background behind text */
   border-radius: 6px;
