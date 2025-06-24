@@ -10,7 +10,7 @@ body {
 
 .container {
   max-width: 900px;
-  margin: 120px auto 40px; /* Increased margin-top for lower box */
+  margin: 160px auto 40px; /* Increased margin-top for lower box */
   background-color: white;
   padding: 40px;
   border-radius: 12px;
