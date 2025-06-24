@@ -9,7 +9,8 @@ body {
 }
 
 .container {
-  margin-top: 80px;
+  max-width: 900px;          
+  margin: 120px auto 40px;    
   text-align: center;
   background-color: white;
   padding: 40px;
