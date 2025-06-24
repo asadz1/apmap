@@ -96,17 +96,18 @@ nav {
 /* Disclaimer footer */
 footer.disclaimer {
   position: fixed;
-  bottom: 8px;
-  left: 0;
+  bottom: 10px;
   width: 100%;
-  font-size: 0.8rem;
   text-align: center;
-  color: #444;
-  background: transparent;
-  padding: 5px 10px;
-  pointer-events: none;
-  white-space: normal;
-  word-wrap: break-word;
+  font-size: 0.8rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.7); /* Soft white see-through backdrop */
+  padding: 8px 12px;
+  backdrop-filter: blur(4px); /* Softens the background behind text */
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Light glow for better contrast */
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 /* Responsive fallback for short screens */
