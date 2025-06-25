@@ -36,6 +36,7 @@ p {
   border: 1px solid #ccc;
 }
 
+/* Navigation Bar */
 nav {
   background-color: #2a4fa3;
   height: auto;
@@ -53,8 +54,8 @@ nav {
 .navbar {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
   margin: 0;
   padding: 0 10px;
@@ -96,6 +97,7 @@ nav {
   width: 100%;
 }
 
+/* Disclaimer footer */
 footer.disclaimer {
   position: fixed;
   bottom: 10px;
@@ -112,14 +114,14 @@ footer.disclaimer {
   margin: 0 auto;
 }
 
-/* Fallback for short screens */
+/* Short screen fallback */
 @media (max-height: 700px) {
   .container {
     margin-top: 100px;
   }
 }
 
-/* Fixes for small screen widths (like mobile phones) */
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .container {
     width: 90%;
@@ -138,6 +140,19 @@ footer.disclaimer {
     gap: 10px;
   }
 
+  .navbar li {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar a {
+    padding: 8px 0;
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+
   .dropdowns {
     display: flex;
     flex-direction: column;
@@ -147,7 +162,6 @@ footer.disclaimer {
   .dropdowns select {
     width: 100%;
     margin: 10px 0;
-    font-size: 1em;
   }
 
   footer.disclaimer {
@@ -156,38 +170,20 @@ footer.disclaimer {
     max-width: 95%;
     bottom: 5px;
   }
-
-  .navbar li {
-  display: block;
-  margin: 0;
-  padding: 0;
-  }
-
-  .navbar a {
-  padding: 8px 0;
-  display: block;
-  text-align: center;
-  width: 100%;
-  }
 }
 
-/* --- ultra-phone fix (≤480 px wide) ---------------------------------- */
+/* Ultra small screen tweak */
 @media (max-width: 480px) {
   .navbar {
-    flex-direction: row;      /* keep links in one line        */
-    flex-wrap: nowrap;        /* never wrap to a new row       */
-    justify-content: center;  /* center as a group             */
-    gap: 12px;                /* small, even spacing           */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
     padding: 0 6px;
   }
 
-  .navbar li {                /* remove any hidden margins     */
-    margin: 0;
-  }
-
-  .navbar a {                 /* slightly smaller tap targets  */
+  .navbar a {
     font-size: 16px;
     padding: 8px 12px;
   }
 }
-
