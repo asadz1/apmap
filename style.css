@@ -156,4 +156,17 @@ footer.disclaimer {
     max-width: 95%;
     bottom: 5px;
   }
+
+  .navbar li {
+  display: block;
+  margin: 0;
+  padding: 0;
+  }
+
+  .navbar a {
+  padding: 8px 0;
+  display: block;
+  text-align: center;
+  width: 100%;
+  }
 }
