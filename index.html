@@ -5,12 +5,26 @@
   <title>APMap – Find Your Credit Path</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+  const links = document.querySelectorAll('.navbar a');
+  const current = location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === current || (current === '' && link.getAttribute('href') === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+</script>
+
 <body>
 
   <!-- ───────── NAV BAR ───────── -->
   <nav>
     <ul class="navbar">
-      <li><a href="/"               class="active">Map</a></li>
+      <li><a href="index.html" class="active">Map</a></li>
       <li><a href="/about-ap-exams.html">About AP Exams</a></li>
       <li><a href="/donate.html">Donate</a></li>
     </ul>
