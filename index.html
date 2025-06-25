@@ -64,16 +64,17 @@
 
   <!-- ───────── NAVBAR HIGHLIGHT SCRIPT ───────── -->
   <script>
-    const links = document.querySelectorAll('.navbar a');
-    const current = location.pathname.split('/').pop() || 'index.html';
+const links = document.querySelectorAll('.navbar a');
+const current = location.pathname === '/' ? '/' : location.pathname.split('/').pop();
 
-    links.forEach(link => {
-      if (link.getAttribute('href') === current) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
+links.forEach(link => {
+  const href = link.getAttribute('href');
+  if (href === current) {
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
+});
   </script>
 
 </body>
