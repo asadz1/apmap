@@ -116,3 +116,36 @@ footer.disclaimer {
     margin-top: 100px;
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    top: 4vh;
+  }
+
+  .dropdowns select {
+    width: 100%;
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  nav ul.navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  nav {
+    height: auto;
+    padding: 15px 0;
+  }
+
+  footer.disclaimer {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    max-width: 95%;
+    bottom: 5px;
+  }
+}
+
