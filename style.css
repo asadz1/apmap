@@ -10,7 +10,7 @@ body {
 
 .container {
   max-width: 900px;
-  margin: 160px auto 40px;
+  margin: 120px auto 40px;
   background-color: white;
   padding: 40px;
   border-radius: 12px;
@@ -38,13 +38,14 @@ p {
 
 nav {
   background-color: #2a4fa3;
-  height: 60px;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
+  padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
@@ -52,9 +53,12 @@ nav {
 .navbar {
   list-style: none;
   display: flex;
-  gap: 40px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
+  width: 100%;
 }
 
 .navbar li {
@@ -124,20 +128,19 @@ footer.disclaimer {
   .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+  }
+
+  nav ul.navbar {
+    flex-direction: column;
+    gap: 10px;
     padding: 10px 0;
   }
 
-  .navbar li {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar a {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 0;
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .dropdowns select {
@@ -148,24 +151,8 @@ footer.disclaimer {
 
   footer.disclaimer {
     font-size: 0.75rem;
-    padding: 10px;
-    bottom: 5px;
+    padding: 6px 10px;
     max-width: 95%;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .container {
-    max-width: 90%;
-    padding: 20px;
-    margin-top: 60px;
-  }
-
-  .dropdowns select {
-    font-size: 0.9em;
-  }
-
-  footer.disclaimer {
-    font-size: 0.7rem;
+    bottom: 5px;
   }
 }
