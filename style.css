@@ -170,3 +170,24 @@ footer.disclaimer {
   width: 100%;
   }
 }
+
+/* --- ultra-phone fix (≤480 px wide) ---------------------------------- */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;      /* keep links in one line        */
+    flex-wrap: nowrap;        /* never wrap to a new row       */
+    justify-content: center;  /* center as a group             */
+    gap: 12px;                /* small, even spacing           */
+    padding: 0 6px;
+  }
+
+  .navbar li {                /* remove any hidden margins     */
+    margin: 0;
+  }
+
+  .navbar a {                 /* slightly smaller tap targets  */
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
