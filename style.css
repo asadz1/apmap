@@ -102,7 +102,7 @@ p {
   gap: 15px;
   flex-direction: row;
   margin: 20px auto;
-  max-width: 100%;
+  max-width: 95%;
 }
 
 .selection-row select,
