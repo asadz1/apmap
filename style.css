@@ -395,3 +395,12 @@ footer.disclaimer {
 .go-row button:hover {
   background-color: #1d3c8c;
 }
+
+.about-container {
+  padding: 25px 30px;
+}
+
+.about-container p {
+  margin: 0 0 20px;
+}
+
