@@ -15,7 +15,6 @@ body {
   min-height: 100vh;
 }
 
-
 /* ──────────────────────────────
    NAVIGATION BAR
 ──────────────────────────────── */
@@ -63,7 +62,6 @@ nav {
   width: 100%;
 }
 
-
 /* ──────────────────────────────
    MAIN CONTAINER CARD
 ──────────────────────────────── */
@@ -86,7 +84,6 @@ p {
   margin: 0 0 30px;
   font-size: 1.1em;
 }
-
 
 /* ──────────────────────────────
    DROPDOWNS & BUTTONS
@@ -130,7 +127,6 @@ p {
   background: #1d3c8c;
 }
 
-
 /* ──────────────────────────────
    DISCLAIMER FOOTER
 ──────────────────────────────── */
@@ -149,7 +145,6 @@ footer.disclaimer {
   font-size: 0.8rem;
   color: #333;
 }
-
 
 /* ──────────────────────────────
    MOBILE PORTRAIT (≤600px)
@@ -189,9 +184,8 @@ footer.disclaimer {
   }
 }
 
-
 /* ──────────────────────────────
-   MOBILE LANDSCAPE (≤850px)
+   MOBILE LANDSCAPE FIX
 ──────────────────────────────── */
 @media (max-width: 850px) and (orientation: landscape) {
   .container {
