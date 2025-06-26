@@ -19,13 +19,16 @@ body {
    NAVIGATION BAR
 ──────────────────────────────── */
 nav {
+  background-color: #2a4fa3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
-  background: #2a4fa3;
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navbar {
@@ -50,6 +53,11 @@ nav {
   padding: 0 20px;
   position: relative;
   transition: background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: transparent;
 }
 
 .navbar a::after {
@@ -92,7 +100,7 @@ p {
 }
 
 /* ──────────────────────────────
-   SELECTS & BUTTONS
+   SELECT MENUS & BUTTONS
 ──────────────────────────────── */
 .selection-row {
   display: flex;
@@ -100,7 +108,6 @@ p {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  flex-direction: row;
   margin: 20px auto;
   max-width: 100%;
 }
@@ -127,6 +134,7 @@ p {
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
+  width: 120px;
 }
 
 .selection-row button:hover {
@@ -134,7 +142,7 @@ p {
 }
 
 /* ──────────────────────────────
-   RESET & GO ROWS (Mobile Stack)
+   ACTION ROWS (RESET & GO)
 ──────────────────────────────── */
 .reset-row,
 .go-row {
@@ -155,8 +163,7 @@ p {
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
-  width: 100%;
-  max-width: 300px;
+  width: 160px;
 }
 
 .reset-row button:hover,
@@ -171,7 +178,6 @@ footer.disclaimer {
   position: relative;
   bottom: 10px;
   width: 100%;
-  max-width: 90%;
   text-align: center;
   font-size: 0.8rem;
   color: #333;
@@ -180,14 +186,25 @@ footer.disclaimer {
   backdrop-filter: blur(4px);
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
   margin: 0 auto;
   margin-top: auto;
 }
 
 /* ──────────────────────────────
-   MOBILE PORTRAIT (≤600px)
+   MOBILE & LANDSCAPE ADJUSTMENTS
 ──────────────────────────────── */
 @media (max-width: 600px) {
+  body {
+    background: #e0f7fa;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto 20px;
+  }
+
   nav {
     flex-direction: column;
     padding: 10px 0;
@@ -201,8 +218,6 @@ footer.disclaimer {
 
   .navbar li {
     display: block;
-    margin: 0;
-    padding: 0;
   }
 
   .navbar a {
@@ -212,14 +227,9 @@ footer.disclaimer {
     width: 100%;
   }
 
-  .container {
-    width: 90%;
-    margin: 100px auto 20px;
-    padding: 20px;
-  }
-
   .selection-row {
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
   }
@@ -238,16 +248,22 @@ footer.disclaimer {
   }
 }
 
-/* ──────────────────────────────
-   MOBILE LANDSCAPE (≤850px height)
-──────────────────────────────── */
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .container {
-    width: 95%;
-    margin: 20px auto;
-    padding: 20px;
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 6px;
   }
 
+  .navbar a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
   .selection-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -273,6 +289,12 @@ footer.disclaimer {
     background: #e0f7fa !important;
   }
 
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
   footer.disclaimer {
     max-width: 95%;
     font-size: 0.75rem;
@@ -288,60 +310,3 @@ footer.disclaimer {
     gap: 15px;
   }
 }
-
-/* ——— HOT-FIX: restore original mobile / desktop behaviour ——— */
-
-/* 1) Keep navbar in a row for everything ≥480 px */
-@media (min-width: 480px) {
-  .navbar {
-    flex-direction: row;
-  }
-}
-
-/* 2) Ensure portrait body keeps the flat aqua BG (hides SVG) */
-@media (max-width: 600px) and (orientation: portrait) {
-  body {
-    background: #e0f7fa;
-  }
-}
-
-@media (max-width: 600px) and (orientation: portrait) {
-  nav {
-    flex-direction: row !important;
-  }
-
-  .navbar {
-    flex-direction: row !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 20px !important;
-  }
-
-  .navbar li {
-    display: inline !important;
-    padding: 0 10px !important;
-  }
-
-  .navbar a {
-    display: inline-block !important;
-    text-align: center !important;
-    width: auto !important;
-  }
-}
-
-@media (min-width: 1025px) {
-  footer.disclaimer {
-    max-width: 94%;
-    font-size: 0.78rem;
-    line-height: 1.3;
-  }
-}
-
-#reset-button,
-#go-button {
-  padding: 10px 26px; /* default is 10px 20px, this gives them just a bit more width */
-}
-
-
-
