@@ -338,3 +338,9 @@ footer.disclaimer {
   }
 }
 
+#reset-button,
+#go-button {
+  width: 150px; 
+}
+
+
