@@ -193,5 +193,11 @@ footer.disclaimer {
     background: url('sandy-beach.svg') bottom center/contain no-repeat, #e0f7fa;
     background-color: #e0f7fa;
   }
+
+  .container {
+    margin-top: 40px;
+    padding: 20px;
+  }
 }
+
 
