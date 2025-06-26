@@ -258,12 +258,13 @@ footer.disclaimer {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
-  max-width: 1100px;
+  flex-wrap: nowrap;
+  max-width: 100%;
   margin: 20px auto;
-  flex-wrap: wrap; /* fallback for smaller screens */
 }
 
 .selection-row button {
+  flex-shrink: 0;
   background-color: #2a4fa3;
   color: white;
   border: none;
@@ -282,8 +283,8 @@ footer.disclaimer {
 
 .dropdowns {
   display: flex;
-  flex-wrap: nowrap;
   gap: 15px;
+  flex-wrap: nowrap;
 }
 
 .dropdowns select {
@@ -294,8 +295,3 @@ footer.disclaimer {
   border-radius: 6px;
   border: 1px solid #ccc;
 }
-
-
-
-
-
