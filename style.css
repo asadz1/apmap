@@ -309,18 +309,36 @@ footer.disclaimer {
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .selection-row {
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
     align-items: center;
-    gap: 10px;
     padding: 0 10px;
   }
 
   .selection-row button,
   .selection-row select {
-    width: 90%;
+    width: 100%;
     max-width: 300px;
-    margin: 5px 0;
+  }
+
+  /* Force Reset to span both columns */
+  #reset-button {
+    grid-column: span 2;
+  }
+
+  /* Put exam + score on top row, university + major on second row */
+  #exam-select,
+  #score-select,
+  #university-select,
+  #major-select {
+    margin: 0;
+  }
+
+  /* Force Go to span both columns */
+  #go-button {
+    grid-column: span 2;
   }
 
   body {
