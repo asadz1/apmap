@@ -317,16 +317,21 @@ footer.disclaimer {
     padding: 0 10px;
   }
 
-  .selection-row button,
-  .selection-row select {
+  .selection-row select,
+  .selection-row button {
     width: 100%;
     max-width: 300px;
   }
 
-  /* Force Reset to span both columns */
+  /* Layout intention */
   #reset-button {
     grid-column: span 2;
   }
+
+  #go-button {
+    grid-column: span 2;
+  }
+}
 
   /* Put exam + score on top row, university + major on second row */
   #exam-select,
