@@ -19,10 +19,16 @@
 
   <!-- ───────── MAIN CARD ───────── -->
   <div class="container">
-    <h1>Explore</h1>
-    <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
+  <h1>Explore</h1>
+  <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
 
-<div class="dropdowns">
+  <!-- RESET BUTTON ABOVE DROPDOWNS -->
+  <div class="button-row top-button">
+    <button id="reset-button">Reset</button>
+  </div>
+
+  <!-- DROPDOWNS -->
+  <div class="dropdowns">
   <select id="exam-select">
     <option disabled selected>Select AP Exam</option>
         
@@ -115,6 +121,23 @@ links.forEach(link => {
   }
 });
   </script>
+<!-- GO BUTTON BELOW DROPDOWNS -->
+<div class="button-row bottom-button">
+  <button id="go-button">Go</button>
+</div>
+
+<!-- DROPDOWN BUTTON FUNCTIONALITY -->
+<script>
+  document.getElementById("reset-button").addEventListener("click", () => {
+    document.querySelectorAll(".dropdowns select").forEach(select => {
+      select.selectedIndex = 0;
+    });
+  });
+
+  document.getElementById("go-button").addEventListener("click", () => {
+    alert("Feature coming soon! This will fetch and display matching credit info.");
+  });
+</script>
 
 </body>
 </html>
