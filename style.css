@@ -396,11 +396,29 @@ footer.disclaimer {
   background-color: #1d3c8c;
 }
 
-.about-container {
-  padding: 25px 30px;
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
 }
 
-.about-container p {
-  margin: 0 0 20px;
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
+
+.about-card.small {
+  max-width: 500px;
+}
+
 
