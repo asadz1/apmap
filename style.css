@@ -291,3 +291,19 @@ footer.disclaimer {
 .selection-row select {
   width: 200px;
 }
+
+@media (max-width: 600px) {
+  .selection-row {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .selection-row select,
+  .selection-row button {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+

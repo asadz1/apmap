@@ -27,7 +27,46 @@
 
   <select id="exam-select">
     <option disabled selected>Select AP Exam</option>
-    <!-- exam options -->
+    <option>African American Studies</option>
+  <option>Art History</option>
+  <option>Biology</option>
+  <option>Calculus AB</option>
+  <option>Calculus BC</option>
+  <option>Chemistry</option>
+  <option>Chinese Language and Culture</option>
+  <option>Comparative Government and Politics</option>
+  <option>Computer Science A</option>
+  <option>Computer Science Principles</option>
+  <option>English Language and Composition</option>
+  <option>English Literature and Composition</option>
+  <option>Environmental Science</option>
+  <option>European History</option>
+  <option>French Language and Culture</option>
+  <option>German Language and Culture</option>
+  <option>Human Geography</option>
+  <option>Italian Language and Culture</option>
+  <option>Japanese Language and Culture</option>
+  <option>Latin</option>
+  <option>Macroeconomics</option>
+  <option>Microeconomics</option>
+  <option>Music Theory</option>
+  <option>Physics 1: Algebra-Based</option>
+  <option>Physics 2: Algebra-Based</option>
+  <option>Physics C: Electricity and Magnetism</option>
+  <option>Physics C: Mechanics</option>
+  <option>Precalculus</option>
+  <option>Psychology</option>
+  <option>Research</option>
+  <option>Seminar</option>
+  <option>Spanish Language and Culture</option>
+  <option>Spanish Literature and Culture</option>
+  <option>Statistics</option>
+  <option>Studio Art: 2-D Design</option>
+  <option>Studio Art: 3-D Design</option>
+  <option>Studio Art: Drawing</option>
+  <option>U.S. Government and Politics</option>
+  <option>U.S. History</option>
+  <option>World History: Modern</option>
   </select>
 
   <select id="score-select">
@@ -37,12 +76,16 @@
 
   <select id="university-select">
     <option disabled selected>Select University</option>
-    <!-- options -->
+      <option>NYU</option>
+      <option>St. John's University</option>
+      <option>Harvard University</option>
   </select>
 
   <select id="major-select">
     <option disabled selected>Select Major</option>
-    <!-- options -->
+      <option>Computer Science</option>
+      <option>Art History</option>
+      <option>Philosophy</option>
   </select>
 
   <button id="go-button">Go</button>
@@ -73,16 +116,15 @@ links.forEach(link => {
 });
   </script>
 
-<!-- DROPDOWN BUTTON FUNCTIONALITY -->
 <script>
   document.getElementById("reset-button").addEventListener("click", () => {
-    document.querySelectorAll(".dropdowns select").forEach(select => {
+    document.querySelectorAll(".selection-row select").forEach(select => {
       select.selectedIndex = 0;
     });
   });
 
   document.getElementById("go-button").addEventListener("click", () => {
-    alert("Feature coming soon! This will fetch and display matching credit info.");
+    alert("Feature coming soon! This will display results based on your selections.");
   });
 </script>
 
