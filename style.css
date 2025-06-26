@@ -99,7 +99,7 @@ nav {
 
 /* Disclaimer footer */
 footer.disclaimer {
-  position: fixed;
+  position: relative;
   bottom: 10px;
   width: 100%;
   text-align: center;
@@ -112,6 +112,7 @@ footer.disclaimer {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   margin: 0 auto;
+  margin-top: auto;
 }
 
 /* Short screen fallback */
@@ -207,6 +208,14 @@ footer.disclaimer {
 
   .container {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
   }
 }
 
