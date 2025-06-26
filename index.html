@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>APMap – Find Your Credit Path</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AP Map – Find Your Credit Path</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ───────── NAV BAR ───────── -->
+  <!-- ───── NAVIGATION BAR ───── -->
   <nav>
     <ul class="navbar">
       <li><a href="/" class="active">Map</a></li>
@@ -17,17 +17,17 @@
     </ul>
   </nav>
 
-  <!-- ───────── MAIN CARD ───────── -->
+  <!-- ───── MAIN CARD CONTENT ───── -->
   <div class="container">
-  <h1>Explore</h1>
-  <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
+    <h1>Explore</h1>
+    <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
 
-<div class="selection-row">
-  <button id="reset-button">Reset</button>
+    <div class="selection-row">
+      <button id="reset-button">Reset</button>
 
-  <select id="exam-select">
-    <option disabled selected>Select AP Exam</option>
-    <option>African American Studies</option>
+      <select id="exam-select">
+        <option disabled selected>Select AP Exam</option>
+  <option>African American Studies</option>
   <option>Art History</option>
   <option>Biology</option>
   <option>Calculus AB</option>
@@ -67,66 +67,81 @@
   <option>U.S. Government and Politics</option>
   <option>U.S. History</option>
   <option>World History: Modern</option>
-  </select>
+      </select>
 
-  <select id="score-select">
-    <option disabled selected>Select Score</option>
-    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
-  </select>
+      <select id="score-select">
+        <option disabled selected>Select Score</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
 
-  <select id="university-select">
-    <option disabled selected>Select University</option>
-      <option>NYU</option>
-      <option>St. John's University</option>
-      <option>Harvard University</option>
-  </select>
+      <select id="university-select">
+        <option disabled selected>Select University</option>
+        <option>NYU</option>
+        <option>St. John's University</option>
+        <option>Harvard University</option>
+      </select>
 
-  <select id="major-select">
-    <option disabled selected>Select Major</option>
-      <option>Computer Science</option>
-      <option>Art History</option>
-      <option>Philosophy</option>
-  </select>
+      <select id="major-select" disabled>
+        <option disabled selected>Please select a university first</option>
+      </select>
 
-  <button id="go-button">Go</button>
-</div>
-
+      <button id="go-button">Go</button>
     </div>
   </div>
 
-  <!-- ───────── DISCLAIMER ───────── -->
+  <!-- ───── DISCLAIMER FOOTER ───── -->
   <footer class="disclaimer">
-    AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board. All AP® trademarks are owned by the College Board.
-    <br>
+    AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.
+    <br />
     While we strive to provide accurate and helpful information, university credit policies may change and often include exceptions or department-level discretion. Always verify all AP credit decisions directly with your university to ensure accuracy.
   </footer>
 
-  <!-- ───────── NAVBAR HIGHLIGHT SCRIPT ───────── -->
+  <!-- ───── JS LOGIC ───── -->
   <script>
-const links = document.querySelectorAll('.navbar a');
-const current = location.pathname === '/' ? '/' : location.pathname.split('/').pop();
-
-links.forEach(link => {
-  const href = link.getAttribute('href');
-  if (href === current) {
-    link.classList.add('active');
-  } else {
-    link.classList.remove('active');
-  }
-});
-  </script>
-
-<script>
-  document.getElementById("reset-button").addEventListener("click", () => {
-    document.querySelectorAll(".selection-row select").forEach(select => {
-      select.selectedIndex = 0;
+    // Highlight active navbar link
+    document.querySelectorAll('.navbar a').forEach(link => {
+      const cur = location.pathname === '/' ? '/' : location.pathname.split('/').pop();
+      link.classList.toggle('active', link.getAttribute('href') === cur);
     });
-  });
 
-  document.getElementById("go-button").addEventListener("click", () => {
-    alert("Feature coming soon! This will display results based on your selections.");
-  });
-</script>
+    // Reset dropdowns to default
+    document.getElementById('reset-button').onclick = () => {
+      document.querySelectorAll('.selection-row select').forEach(s => s.selectedIndex = 0);
+      document.getElementById('major-select').disabled = true;
+      document.getElementById('major-select').innerHTML = '<option disabled selected>Please select a university first</option>';
+    };
+
+    // Go button placeholder action
+    document.getElementById('go-button').onclick = () => {
+      alert('Feature coming soon!');
+    };
+
+    // Dynamic major population
+    const majorsByUni = {
+      "NYU": ["Computer Science", "Film", "Business"],
+      "St. John's University": ["Computer Science", "Biology"],
+      "Harvard University": ["Engineering", "Economics"]
+    };
+
+    const uniSel = document.getElementById('university-select');
+    const majorSel = document.getElementById('major-select');
+
+    uniSel.onchange = () => {
+      const majors = majorsByUni[uniSel.value] || [];
+      if (majors.length) {
+        majorSel.innerHTML = '<option disabled selected>Select Major</option>' +
+          majors.map(m => `<option>${m}</option>`).join('');
+        majorSel.disabled = false;
+      } else {
+        majorSel.innerHTML = '<option disabled selected>No data for this university</option>';
+        majorSel.disabled = true;
+      }
+    };
+  </script>
 
 </body>
 </html>
