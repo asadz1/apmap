@@ -28,14 +28,13 @@ p {
   margin: 0 0 30px;
 }
 
+/* --- DROPDOWNS LAYOUT ---------------------------------- */
 .dropdowns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas:
-    "exam-select     score-select"
-    "university-select major-select";
+  display: flex;                 /* ▶ one row when space allows */
+  flex-wrap: wrap;               /* ▶ wrap on tablets/phones   */
+  justify-content: center;
   gap: 15px;
-  max-width: 600px;
+  max-width: 950px;              /* ▶ keeps them inside card   */
   margin: 0 auto;
 }
 
@@ -53,12 +52,13 @@ p {
 }
 
 .dropdowns select {
+  flex: 1 1 220px;               /* ▶ grows / shrinks, min 220 */
   height: 40px;
   padding: 0 10px;
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
-  width: 100%;
+  width: 100%;                   /* ▶ ensures equal sizing     */
 }
 
 /* Navigation Bar */
