@@ -340,7 +340,8 @@ footer.disclaimer {
 
 #reset-button,
 #go-button {
-  width: 150px; 
+  padding: 10px 26px; /* default is 10px 20px, this gives them just a bit more width */
 }
+
 
 
