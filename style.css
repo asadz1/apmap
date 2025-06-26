@@ -310,17 +310,17 @@ footer.disclaimer {
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .selection-row {
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 0 10px;
   }
 
-  .selection-row select,
-  .selection-row button {
-    flex: 1 1 200px;
-    max-width: 90%;
-    width: auto;
+  .selection-row button,
+  .selection-row select {
+    width: 90%;
+    max-width: 300px;
+    margin: 5px 0;
   }
 
   body {
@@ -330,7 +330,7 @@ footer.disclaimer {
 
   .container {
     width: 95%;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
   }
 
@@ -345,7 +345,35 @@ footer.disclaimer {
 
   .navbar {
     flex-wrap: nowrap;
-    gap: 15px;
     justify-content: center;
+    gap: 15px;
   }
+}
+
+.reset-row,
+.go-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.reset-row button,
+.go-row button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.reset-row button:hover,
+.go-row button:hover {
+  background-color: #1d3c8c;
 }
