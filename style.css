@@ -307,7 +307,7 @@ footer.disclaimer {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 850px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
   .selection-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -317,20 +317,16 @@ footer.disclaimer {
     padding: 0 10px;
   }
 
-  .selection-row select,
-  .selection-row button {
+  .selection-row button,
+  .selection-row select {
     width: 100%;
     max-width: 300px;
   }
 
+  /* Force Reset to span both columns */
   #reset-button {
     grid-column: span 2;
   }
-
-  #go-button {
-    grid-column: span 2;
-  }
-}
 
   /* Put exam + score on top row, university + major on second row */
   #exam-select,
@@ -344,6 +340,33 @@ footer.disclaimer {
   #go-button {
     grid-column: span 2;
   }
+
+  body {
+    overflow-x: hidden;
+    background: #e0f7fa !important;
+  }
+
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  footer.disclaimer {
+    max-width: 95%;
+    font-size: 0.75rem;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
 
 .reset-row,
 .go-row {
