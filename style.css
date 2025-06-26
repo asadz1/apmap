@@ -1,10 +1,3 @@
-/* ──────────────────────────────
-   GLOBAL RESET & BASE STYLES
-──────────────────────────────── */
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -13,23 +6,58 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
-/* ──────────────────────────────
-   NAVIGATION BAR
-──────────────────────────────── */
+.container {
+  max-width: 1150px;
+  margin: 120px auto 40px;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 0 0 30px;
+}
+
+.dropdowns {
+  display: flex;
+  flex-wrap: nowrap;              /* 🔒 Prevent wrap */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dropdowns select {
+  width: 200px;                   /* 🔒 Fixed width */
+  height: 40px;
+  padding: 0 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Navigation Bar */
 nav {
   background-color: #2a4fa3;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   padding: 15px 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .navbar {
@@ -53,8 +81,13 @@ nav {
   font-weight: 600;
   font-size: 18px;
   padding: 0 20px;
-  position: relative;
   transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: transparent;
 }
 
 .navbar a::after {
@@ -73,110 +106,11 @@ nav {
   width: 100%;
 }
 
-/* ──────────────────────────────
-   MAIN CONTAINER
-──────────────────────────────── */
-.container {
-  max-width: 1150px;
-  margin: 120px auto 40px;
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5em;
-  margin: 0 0 10px;
-}
-
-p {
-  font-size: 1.1em;
-  margin: 0 0 30px;
-}
-
-/* ──────────────────────────────
-   SELECTION ROW (DROPDOWNS + BUTTONS)
-──────────────────────────────── */
-.selection-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 15px;
-  margin: 20px auto;
-  max-width: 100%;
-}
-
-.selection-row select,
-.selection-row button {
-  height: 40px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  flex-shrink: 0;
-}
-
-.selection-row select {
-  width: 200px;
-}
-
-.selection-row button {
-  background-color: #2a4fa3;
-  color: white;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease;
-}
-
-.selection-row button:hover {
-  background-color: #1d3c8c;
-}
-
-/* ──────────────────────────────
-   ACTION ROW ALTERNATE BUTTONS
-──────────────────────────────── */
-.reset-row,
-.go-row {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto;
-}
-
-.reset-row button,
-.go-row button {
-  background-color: #2a4fa3;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease;
-  width: 100%;
-  max-width: 300px;
-}
-
-.reset-row button:hover,
-.go-row button:hover {
-  background-color: #1d3c8c;
-}
-
-/* ──────────────────────────────
-   DISCLAIMER FOOTER
-──────────────────────────────── */
+/* Disclaimer footer */
 footer.disclaimer {
   position: relative;
   bottom: 10px;
   width: 100%;
-  max-width: 90%;
   text-align: center;
   font-size: 0.8rem;
   color: #333;
@@ -185,25 +119,24 @@ footer.disclaimer {
   backdrop-filter: blur(4px);
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
   margin: 0 auto;
   margin-top: auto;
 }
 
-/* ──────────────────────────────
-   RESPONSIVE: SHORT SCREENS
-──────────────────────────────── */
+/* Short screen fallback */
 @media (max-height: 700px) {
   .container {
     margin-top: 100px;
   }
 }
 
-/* ──────────────────────────────
-   RESPONSIVE: MOBILE PORTRAIT ≤600px
-──────────────────────────────── */
+/* Mobile adjustments */
 @media (max-width: 600px) {
-  body {
-    background: #e0f7fa;
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 100px auto 20px;
   }
 
   nav {
@@ -230,12 +163,136 @@ footer.disclaimer {
     width: 100%;
   }
 
-  .container {
-    width: 90%;
-    padding: 20px;
-    margin: 100px auto 20px;
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
+  .dropdowns select {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  footer.disclaimer {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    max-width: 95%;
+    bottom: 5px;
+  }
+}
+
+/* Ultra small screen tweak */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 6px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: url('sandy-beach.svg') bottom center/contain no-repeat, #e0f7fa;
+    background-color: #e0f7fa;
+  }
+
+  .container {
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: #e0f7fa; /* flat aqua background only */
+  }
+
+  .container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+
+#reset-button,
+#go-button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+#reset-button:hover,
+#go-button:hover {
+  background-color: #1d3c8c;
+}
+
+.selection-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.selection-row select,
+.selection-row button {
+  height: 40px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.selection-row button {
+  background-color: #2a4fa3;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.selection-row button:hover {
+  background-color: #1d3c8c;
+}
+
+.selection-row select {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
   .selection-row {
     flex-wrap: wrap;
     flex-direction: column;
@@ -248,29 +305,9 @@ footer.disclaimer {
     width: 90%;
     max-width: 300px;
   }
-
-  footer.disclaimer {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-    max-width: 95%;
-    bottom: 5px;
-  }
 }
 
-/* ──────────────────────────────
-   RESPONSIVE: MOBILE LANDSCAPE
-──────────────────────────────── */
 @media screen and (orientation: landscape) and (max-height: 500px) {
-  body {
-    background: #e0f7fa !important;
-  }
-
-  .container {
-    width: 95%;
-    margin: 20px auto;
-    padding: 20px;
-  }
-
   .selection-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -280,15 +317,39 @@ footer.disclaimer {
     padding: 0 10px;
   }
 
-  .selection-row select,
-  .selection-row button {
+  .selection-row button,
+  .selection-row select {
     width: 100%;
     max-width: 300px;
   }
 
-  #reset-button,
+  /* Force Reset to span both columns */
+  #reset-button {
+    grid-column: span 2;
+  }
+
+  /* Put exam + score on top row, university + major on second row */
+  #exam-select,
+  #score-select,
+  #university-select,
+  #major-select {
+    margin: 0;
+  }
+
+  /* Force Go to span both columns */
   #go-button {
     grid-column: span 2;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: #e0f7fa !important;
+  }
+
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
   }
 
   footer.disclaimer {
@@ -307,20 +368,30 @@ footer.disclaimer {
   }
 }
 
-/* ──────────────────────────────
-   RESPONSIVE: ULTRA SMALL WIDTH
-──────────────────────────────── */
-@media (max-width: 480px) {
-  .navbar {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 0 6px;
-  }
+.reset-row,
+.go-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
 
-  .navbar a {
-    font-size: 16px;
-    padding: 8px 12px;
-  }
+.reset-row button,
+.go-row button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.reset-row button:hover,
+.go-row button:hover {
+  background-color: #1d3c8c;
 }
