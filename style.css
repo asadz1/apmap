@@ -307,3 +307,26 @@ footer.disclaimer {
   }
 }
 
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  body {
+    background: #e0f7fa !important; /* remove image in landscape if needed */
+    overflow-x: hidden;
+  }
+
+  .container {
+    margin: 60px auto;
+    width: 95%;
+    padding: 20px;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+
+  footer.disclaimer {
+    max-width: 95%;
+    font-size: 0.75rem;
+  }
+}
+
