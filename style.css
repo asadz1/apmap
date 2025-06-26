@@ -288,3 +288,19 @@ footer.disclaimer {
     gap: 15px;
   }
 }
+
+/* ——— HOT-FIX: restore original mobile / desktop behaviour ——— */
+
+/* 1) Keep navbar in a row for everything ≥480 px */
+@media (min-width: 480px) {
+  .navbar {
+    flex-direction: row;
+  }
+}
+
+/* 2) Ensure portrait body keeps the flat aqua BG (hides SVG) */
+@media (max-width: 600px) and (orientation: portrait) {
+  body {
+    background: #e0f7fa;
+  }
+}
