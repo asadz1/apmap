@@ -1,101 +1,212 @@
 /* ---------------------------------
    GLOBAL RESET & PAGE BASICS
 ----------------------------------*/
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#e0f7fa url('sandy-beach.svg') center/cover no-repeat;
-  display:flex;flex-direction:column;align-items:center;
-  min-height:100vh;
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e0f7fa url('sandy-beach.svg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 /* ---------------------------------
    NAVBAR
 ----------------------------------*/
-nav{
-  position:fixed;top:0;width:100%;z-index:1000;
-  background:#2a4fa3;padding:15px 0;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #2a4fa3;
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.navbar{
-  margin:0;padding:0 10px;list-style:none;
-  display:flex;justify-content:center;gap:30px;flex-wrap:wrap;
+
+.navbar {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.navbar a{
-  color:#fff;text-decoration:none;font-weight:600;font-size:18px;position:relative;
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  position: relative;
 }
-.navbar a::after{
-  content:'';position:absolute;left:0;bottom:-6px;height:3px;width:0;
-  background:#00b4d8;transition:.3s;
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 0;
+  background: #00b4d8;
+  transition: 0.3s;
 }
-.navbar a:hover::after,.navbar a.active::after{width:100%}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
 
 /* ---------------------------------
    MAIN CARD
 ----------------------------------*/
-.container{
-  max-width:1150px;margin:120px auto 40px;
-  background:#fff;padding:40px 30px;border-radius:12px;
-  box-shadow:0 0 20px rgba(0,0,0,.1);text-align:center;
+.container {
+  max-width: 1150px;
+  margin: 120px auto 40px;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
-h1{margin:0 0 10px;font-size:2.5em}
-p{margin:0 0 30px;font-size:1.1em}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 2.5em;
+}
+
+p {
+  margin: 0 0 30px;
+  font-size: 1.1em;
+}
 
 /* ---------------------------------
    SELECT / BUTTON STRIP
 ----------------------------------*/
-.selection-row{
-  display:flex;flex-wrap:nowrap;gap:15px;justify-content:center;align-items:center;
-  margin:20px auto;max-width:100%;
+.selection-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 100%;
 }
+
 .selection-row select,
-.selection-row button{
-  height:40px;padding:0 10px;font-size:1em;border-radius:6px;border:1px solid #ccc;
-  flex-shrink:0
+.selection-row button {
+  height: 45px;
+  padding: 0 12px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
 }
-.selection-row select{width:200px}
-.selection-row button{
-  background:#2a4fa3;color:#fff;font-weight:600;border:none;cursor:pointer;
-  box-shadow:0 4px 10px rgba(0,0,0,.1);transition:background-color .2s
+
+.selection-row select {
+  width: 200px;
 }
-.selection-row button:hover{background:#1d3c8c}
+
+.selection-row button {
+  width: 120px;
+  background: #2a4fa3;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.selection-row button:hover {
+  background: #1d3c8c;
+}
 
 /* ---------------------------------
    FOOTER
 ----------------------------------*/
-footer.disclaimer{
-  position:relative;bottom:10px;margin-top:auto;
-  width:100%;max-width:90%;
-  background:rgba(255,255,255,.5);backdrop-filter:blur(4px);
-  padding:8px 12px;border-radius:6px;
-  text-align:center;font-size:.8rem;color:#333;
-  box-shadow:0 0 12px rgba(0,0,0,.2);
+footer.disclaimer {
+  position: relative;
+  bottom: 10px;
+  margin-top: auto;
+  width: 100%;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ---------------------------------
    PORTRAIT MOBILE  (≤600px)
 ----------------------------------*/
-@media (max-width:600px){
-  nav{flex-direction:column;padding:10px 0}
-  .navbar{flex-direction:column;gap:10px}
-  .container{width:90%;margin:100px auto 20px;padding:20px}
-  .selection-row{flex-direction:column;flex-wrap:wrap;gap:10px}
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 100px auto 20px;
+    padding: 20px;
+  }
+
+  .selection-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
   .selection-row select,
-  .selection-row button{width:90%;max-width:300px}
-  footer.disclaimer{font-size:.75rem;padding:6px 10px;max-width:95%}
+  .selection-row button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  footer.disclaimer {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    max-width: 95%;
+  }
 }
 
 /* ---------------------------------
-   LANDSCAPE MOBILE  (≤850px, height ≤500px)
+   LANDSCAPE MOBILE FIX
 ----------------------------------*/
-@media (max-width:850px) and (orientation:landscape) and (max-height:500px){
-  .selection-row{
-    display:grid;grid-template-columns:1fr 1fr;
-    gap:12px;justify-items:center;align-items:center;padding:10px 5%;
+@media (max-width: 850px) and (orientation: landscape) {
+  .container {
+    width: 95%;
+    margin: 80px auto 20px;
+    padding: 20px;
   }
-  .selection-row>*{width:100%;max-width:300px}
-  #reset-button,#go-button{grid-column:span 2}
-  .container{width:95%;margin:80px auto 20px;padding:20px}
-  body,html{overflow-x:hidden}
+
+  .selection-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .selection-row > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #reset-button,
+  #go-button {
+    grid-column: span 2;
+  }
 }
