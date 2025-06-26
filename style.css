@@ -1,3 +1,12 @@
+.selection-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -307,21 +316,18 @@ footer.disclaimer {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 850px) {
+@media (max-width: 600px) and (orientation: portrait) {
   .selection-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    justify-items: center;
-    align-items: center;
-    padding: 0 10px;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .selection-row select,
   .selection-row button {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
   }
+}
 
   #reset-button {
     grid-column: span 2;
@@ -372,3 +378,34 @@ footer.disclaimer {
 .go-row button:hover {
   background-color: #1d3c8c;
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+  .selection-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .selection-row select,
+  .selection-row button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #reset-button,
+  #go-button {
+    grid-column: span 2;
+  }
+
+  body, html {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 95%;
+  }
+}
+
