@@ -332,7 +332,9 @@ footer.disclaimer {
 
 @media (min-width: 1025px) {
   footer.disclaimer {
-    max-width: 92%;
-    font-size: 0.82rem;
+    max-width: 94%;
+    font-size: 0.78rem;
+    line-height: 1.3;
   }
 }
+
