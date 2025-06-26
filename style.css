@@ -97,13 +97,12 @@ p {
 .selection-row {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;     /* change from center */
+  justify-content: center;
   align-items: center;
-  gap: 20px;                           /* optional: increases spacing */
+  gap: 15px;
+  flex-direction: row;
   margin: 20px auto;
-  width: 100%;
-  max-width: 1300px;                   /* new: makes it stretch wider on desktop */
-  padding: 0 30px;                     /* optional: buffer on left/right */
+  max-width: 100%;
 }
 
 .selection-row select,
