@@ -255,23 +255,30 @@ footer.disclaimer {
 
 .selection-row {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  max-width: 1000px;
+  flex-direction: row;
   margin: 20px auto;
+  max-width: 100%;
+}
+
+.selection-row select,
+.selection-row button {
+  height: 40px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  flex-shrink: 0;
 }
 
 .selection-row button {
-  flex-shrink: 0;
   background-color: #2a4fa3;
   color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 1em;
   font-weight: 600;
+  border: none;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: background-color 0.2s ease;
@@ -281,19 +288,6 @@ footer.disclaimer {
   background-color: #1d3c8c;
 }
 
-.dropdowns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  flex-grow: 1;
-}
-
-.dropdowns select {
+.selection-row select {
   width: 200px;
-  height: 40px;
-  padding: 0 10px;
-  font-size: 1em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
 }
