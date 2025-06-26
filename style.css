@@ -255,11 +255,11 @@ footer.disclaimer {
 
 .selection-row {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 15px;
-  flex-wrap: nowrap;
-  max-width: 100%;
+  max-width: 1000px;
   margin: 20px auto;
 }
 
@@ -283,8 +283,10 @@ footer.disclaimer {
 
 .dropdowns {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  flex-wrap: nowrap;
+  flex-grow: 1;
 }
 
 .dropdowns select {
