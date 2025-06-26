@@ -30,11 +30,26 @@ p {
 
 .dropdowns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-gap: 15px;
-  justify-content: center;
-  max-width: 800px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "exam-select     score-select"
+    "university-select major-select";
+  gap: 15px;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+#exam-select {
+  grid-area: exam-select;
+}
+#score-select {
+  grid-area: score-select;
+}
+#university-select {
+  grid-area: university-select;
+}
+#major-select {
+  grid-area: major-select;
 }
 
 .dropdowns select {
