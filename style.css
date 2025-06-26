@@ -329,3 +329,10 @@ footer.disclaimer {
     width: auto !important;
   }
 }
+
+@media (min-width: 1025px) {
+  footer.disclaimer {
+    max-width: 92%;
+    font-size: 0.82rem;
+  }
+}
