@@ -9,10 +9,10 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1150px;
   margin: 120px auto 40px;
   background-color: white;
-  padding: 40px;
+  padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   text-align: center;
