@@ -307,26 +307,45 @@ footer.disclaimer {
   }
 }
 
-@media screen and (orientation: landscape) and (max-height: 600px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .selection-row {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .selection-row select,
+  .selection-row button {
+    flex: 1 1 200px;
+    max-width: 90%;
+    width: auto;
+  }
+
   body {
-    background: #e0f7fa !important; /* remove image in landscape if needed */
     overflow-x: hidden;
+    background: #e0f7fa !important;
   }
 
   .container {
-    margin: 60px auto;
     width: 95%;
+    margin: 30px auto;
     padding: 20px;
-  }
-
-  .navbar {
-    flex-wrap: nowrap;
-    gap: 15px;
   }
 
   footer.disclaimer {
     max-width: 95%;
     font-size: 0.75rem;
   }
-}
 
+  nav {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    gap: 15px;
+    justify-content: center;
+  }
+}
