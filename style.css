@@ -304,3 +304,28 @@ footer.disclaimer {
     background: #e0f7fa;
   }
 }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  nav {
+    flex-direction: row !important;
+  }
+
+  .navbar {
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+  }
+
+  .navbar li {
+    display: inline !important;
+    padding: 0 10px !important;
+  }
+
+  .navbar a {
+    display: inline-block !important;
+    text-align: center !important;
+    width: auto !important;
+  }
+}
