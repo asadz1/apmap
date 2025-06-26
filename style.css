@@ -29,19 +29,21 @@ p {
 }
 
 .dropdowns {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 15px;
   justify-content: center;
-  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .dropdowns select {
-  width: 220px;
   height: 40px;
   padding: 0 10px;
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
+  width: 100%;
 }
 
 /* Navigation Bar */
