@@ -200,4 +200,15 @@ footer.disclaimer {
   }
 }
 
+@media (max-width: 600px) {
+  body {
+    background: url('sandy-beach.svg') center 75% / contain no-repeat, #e0f7fa;
+  }
+
+  .container {
+    margin-top: 40px;
+  }
+}
+
+
 
