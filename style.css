@@ -35,9 +35,6 @@ p {
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 /* Navigation Bar */
