@@ -34,6 +34,7 @@ p {
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
+    max-height: 42px;
 }
 
 /* Navigation Bar */
