@@ -426,3 +426,8 @@ footer.disclaimer {
   text-align: center;
 }
 
+.bullet-list li {
+  font-size: 1.1em; /* Match your paragraph font size */
+  line-height: 1.6;
+}
+
