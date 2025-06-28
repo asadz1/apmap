@@ -414,11 +414,15 @@ footer.disclaimer {
   max-width: 1000px;
   width: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .about-card.small {
   max-width: 500px;
 }
 
+.about-card h1,
+.about-card h2,
+.about-card h3 {
+  text-align: center;
+}
 
