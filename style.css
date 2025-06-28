@@ -435,23 +435,6 @@ footer.disclaimer {
   line-height: 1.6;
 }
 
-.navbar {
-  background-color: #234c9c;
-  padding: 15px;
-  text-align: center;
-}
-
-.navbar a {
-  color: white;
-  margin: 0 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a.active {
-  border-bottom: 3px solid #00bcd4;
-}
-
 <link rel="stylesheet" href="style.css" />
 
 .footer {
