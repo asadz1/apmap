@@ -502,5 +502,14 @@ footer.disclaimer {
   }
 }
 
+.background-filler {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2a4fa3; /* Matches nav */
+  z-index: -10;
+}
 
 
