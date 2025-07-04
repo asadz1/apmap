@@ -414,9 +414,9 @@ footer.disclaimer {
 .about-card {
   background: #fff;
   border-radius: 12px;
-  padding: 20px 24px;
-  width: calc(100vw - 48px); /* Subtracts 24px padding on both sides */
-  max-width: 850px;
+  padding: 20px 24px; /* Top/Bottom: 20px, Left/Right: 24px */
+  max-width: 85vw;
+  width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
