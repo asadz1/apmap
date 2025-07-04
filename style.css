@@ -507,6 +507,10 @@ footer.disclaimer {
 /*     Donate Page Enhancements   */
 /* ------------------------------ */
 
+main.background {
+  margin-top: 100px;
+}
+
 .styled-donate-button {
   background-color: #2a4fa3;
   color: white;
@@ -543,5 +547,3 @@ footer.disclaimer {
   list-style: none;
   padding: 0;
 }
-
-
