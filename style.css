@@ -503,5 +503,46 @@ footer.disclaimer {
   }
 }
 
+/* ------------------------------ */
+/*     Donate Page Enhancements   */
+/* ------------------------------ */
+
+.styled-donate-button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.styled-donate-button:hover {
+  background-color: #1d3c8c;
+}
+
+.donate-button-row {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.centered-list {
+  display: flex;
+  justify-content: center;
+}
+
+.centered-list ul {
+  text-align: left;
+  list-style: none;
+  padding: 0;
+}
+
 
 
