@@ -2,48 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support This Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-container">
-      <a href="index.html" class="nav-link">Map</a>
-      <a href="about-ap-exams.html" class="nav-link">About AP Exams</a>
-      <a href="donate.html" class="nav-link active">Donate</a>
-    </div>
+    <nav>
+    <ul class="navbar">
+      <li><a href="/">Map</a></li>
+      <li><a href="/about-ap-exams.html">About AP Exams</a> </li>
+      <li><a href="/donate.html"class="active">Donate</a></li>
+    </ul>
   </nav>
 
-  <div class="content">
-    <div class="card">
+<div class="background">
+
+    <div class="about-card">
       <h1>Support This Project</h1>
       <p>This site was created independently and without ads. If you found it helpful, consider supporting its continued development and hosting costs. Every bit helps.</p>
 
       <h2>PayPal</h2>
-      <div class="centered">
-        <a href="https://www.paypal.com/donate" class="button primary-button">Donate via PayPal</a>
-      </div>
+      <div class="donate-button-row">
+  <button class="styled-donate-button" onclick="window.open('https://paypal.me/yourlink', '_blank')">
+    Donate via PayPal
+  </button>
+</div>
 
       <h2>Credit/Debit Card</h2>
       <p>Use the PayPal button above — they accept cards without needing a PayPal account.</p>
 
       <h2>Crypto</h2>
       <p>You can send crypto to the following wallet addresses:</p>
-      <div class="centered">
-        <ul style="list-style: none; padding-left: 0; text-align: center;">
-          <li><strong>Bitcoin (BTC):</strong> bc1qxyzexampleaddress</li>
-          <li><strong>Ethereum (ETH):</strong> 0x123exampleaddress456</li>
-          <li><strong>Solana (SOL):</strong> 8abcExampleSolAddress</li>
-        </ul>
-      </div>
+      <div class="centered-list">
+      <ul>
+        <li><strong>Bitcoin (BTC):</strong> bc1qxyzexampleaddress</li>
+        <li><strong>Ethereum (ETH):</strong> 0x123exampleaddress456</li>
+        <li><strong>Solana (SOL):</strong> 8abcExampleSolAddress</li>
+      </ul>
     </div>
-  </div>
 
-  <footer>
-    <div class="disclaimer">
-      AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.
-    </div>
-  </footer>
+    <div class="footer">
+  <p>AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.</p>
+</div>
+
+  </div>
 </body>
 </html>
