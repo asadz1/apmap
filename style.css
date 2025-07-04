@@ -467,5 +467,37 @@ footer.disclaimer {
   }
 }
 
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .about-page {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .about-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .about-card h1,
+  .about-card p,
+  .about-card ul,
+  .about-card li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  p, li {
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+}
+
 
 
