@@ -414,12 +414,11 @@ footer.disclaimer {
 .about-card {
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
-  margin: 0 16px; /* Adds clean breathing room left + right */
-  width: auto;
+  width: 100%;
   max-width: 850px;
-  box-sizing: border-box;
+  margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .about-inner {
