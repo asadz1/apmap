@@ -414,12 +414,19 @@ footer.disclaimer {
 .about-card {
   background: #fff;
   border-radius: 12px;
-  padding: 20px;
-  margin: 0 16px; /* Adds clean breathing room left + right */
-  width: auto;
+  padding: 20px 24px;
+  width: calc(100% - 32px);   /* 16px left + right breathing room */
   max-width: 850px;
+  margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .about-card {
+    padding: 16px 20px;
+    font-size: 0.95rem;
+  }
 }
 
 .about-inner {
@@ -443,142 +450,3 @@ footer.disclaimer {
 }
 
 <link rel="stylesheet" href="style.css" />
-
-@media (max-width: 600px) {
-  .content {
-    padding: 20px;
-  }
-
-  h1, h2, h3 {
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  p {
-    padding: 0 12px;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 600px) {
-  .container, .content, .main {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1.6;
-  }
-}
-
-@media (max-width: 600px) {
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .container, .content, .main {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 15px !important;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5rem !important;
-    text-align: center;
-    padding: 0 !important;
-    margin-top: 20px;
-  }
-
-  p {
-    font-size: 1rem !important;
-    line-height: 1.6;
-    padding: 0 !important;
-    margin: 15px 0;
-  }
-
-  img, iframe, video {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width: 600px) {
-  .about-page {
-    margin: 100px auto 20px;
-    padding: 0 10px;
-  }
-
-  .about-card {
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .about-card h1,
-  .about-card h2,
-  .about-card h3 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin-top: 15px;
-    text-align: center;
-  }
-
-  .about-card p,
-  .about-card li {
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 0;
-    margin: 12px 0;
-  }
-
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .about-page {
-    margin: 80px auto 20px;
-    padding: 0 10px;
-  }
-
-  .about-card {
-    padding: 20px;
-    max-width: 95%;
-    font-size: 0.95rem;
-    box-sizing: border-box;
-  }
-
-  .about-card h1,
-  .about-card h2,
-  .about-card h3 {
-    font-size: 1.4rem;
-    margin-top: 10px;
-  }
-
-  .about-card p,
-  .about-card li {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-}
-
-@media screen and (max-width: 950px) {
-  .about-card {
-    padding: 20px;
-  }
-}
-
-html {
-  overflow-y: scroll;
-}
