@@ -1,20 +1,57 @@
-/* ========== Global Styles ========== */
 html, body {
   overflow-x: hidden;
+  background-color: #2a4fa3; /* ✅ NAVBAR BLUE */
+}
+
+body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8;
+  background: url('sandy-beach.svg') center/cover no-repeat, #2a4fa3;
+  background-color: #2a4fa3; /* ✅ solid fallback under nav */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 800px;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 auto;
+  max-width: 1150px;
+  margin: 120px auto 40px;
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* ========== Navbar ========== */
+h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px;
+}
+
+p {
+  font-size: 1.1em;
+  margin: 0 0 30px;
+}
+
+.dropdowns {
+  display: flex;
+  flex-wrap: nowrap;              /* 🔒 Prevent wrap */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.dropdowns select {
+  width: 200px;                   /* 🔒 Fixed width */
+  height: 40px;
+  padding: 0 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Navigation Bar */
 nav {
   background-color: #2a4fa3;
   height: auto;
@@ -23,9 +60,9 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  width: 100vw;
+  left: 0;                       /* ✅ ADD */
+  right: 0;                      /* ✅ ADD */
+  width: 100vw;                  /* ✅ REPLACE 100% with 100vw */
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -34,9 +71,12 @@ nav {
 .navbar {
   list-style: none;
   display: flex;
-  gap: 20px;
-  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   margin: 0;
+  padding: 0 10px;
+  width: 100%;
 }
 
 .navbar li {
@@ -44,101 +84,67 @@ nav {
 }
 
 .navbar a {
+  color: white;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 10px;
-  transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #1d3b8b;
-  border-radius: 4px;
-}
-
-/* ========== Dropdown Section ========== */
-.dropdowns {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-  gap: 20px;
-}
-
-.selection-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.selection-row select,
-.selection-row button {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
-}
-
-.selection-row button {
-  background-color: #2a4fa3;
-  color: white;
-  cursor: pointer;
-  border: none;
-}
-
-.selection-row button:hover {
-  background-color: #1d3b8b;
-}
-
-/* ========== About Page ========== */
-.about-page {
-  margin-top: 100px;
-  width: 100%;
-  max-width: 800px;
-}
-
-.about-card {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-}
-
-.about-card h1,
-.about-card p,
-.about-card ul,
-.about-card li {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-}
-
-/* ========== Footer ========== */
-footer.disclaimer {
-  font-size: 0.8rem;
-  text-align: center;
-  color: #333;
-  padding: 10px;
-  width: 100%;
-  background-color: #f5f5f5;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 20px;
+  transition: background-color 0.3s ease;
   position: relative;
-  margin-top: auto;
-  box-sizing: border-box;
 }
 
-/* ========== Mobile View (Portrait) ========== */
+.navbar a:hover,
+.navbar a.active {
+  background-color: transparent;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background-color: #00b4d8;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* Disclaimer footer */
+footer.disclaimer {
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: auto;
+}
+
+/* Short screen fallback */
+@media (max-height: 700px) {
+  .container {
+    margin-top: 100px;
+  }
+}
+
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .container {
-    margin-top: 40px;
     width: 90%;
     padding: 20px;
+    margin: 100px auto 20px;
   }
 
   nav {
@@ -176,6 +182,125 @@ footer.disclaimer {
     margin: 10px 0;
   }
 
+  footer.disclaimer {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+    max-width: 95%;
+    bottom: 5px;
+  }
+}
+
+/* Ultra small screen tweak */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 0 6px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: url('sandy-beach.svg') bottom center/contain no-repeat, #e0f7fa;
+    background-color: #e0f7fa;
+  }
+
+  .container {
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background: #e0f7fa; /* flat aqua background only */
+  }
+
+  .container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
+  }
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto 10px;
+}
+
+#reset-button,
+#go-button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+#reset-button:hover,
+#go-button:hover {
+  background-color: #1d3c8c;
+}
+
+.selection-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+.selection-row select,
+.selection-row button {
+  height: 40px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+
+.selection-row button {
+  background-color: #2a4fa3;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.selection-row button:hover {
+  background-color: #1d3c8c;
+}
+
+.selection-row select {
+  width: 200px;
+}
+
+@media (max-width: 600px) {
   .selection-row {
     flex-wrap: wrap;
     flex-direction: column;
@@ -188,7 +313,133 @@ footer.disclaimer {
     width: 90%;
     max-width: 300px;
   }
+}
 
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .selection-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .selection-row button,
+  .selection-row select {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Force Reset to span both columns */
+  #reset-button {
+    grid-column: span 2;
+  }
+
+  /* Put exam + score on top row, university + major on second row */
+  #exam-select,
+  #score-select,
+  #university-select,
+  #major-select {
+    margin: 0;
+  }
+
+  /* Force Go to span both columns */
+  #go-button {
+    grid-column: span 2;
+  }
+
+  body {
+    overflow-x: hidden;
+    background: #e0f7fa !important;
+  }
+
+  .container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  footer.disclaimer {
+    max-width: 95%;
+    font-size: 0.75rem;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.reset-row,
+.go-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.reset-row button,
+.go-row button {
+  background-color: #2a4fa3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.reset-row button:hover,
+.go-row button:hover {
+  background-color: #1d3c8c;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 120px auto 40px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-card.small {
+  max-width: 500px;
+}
+
+.about-card h1,
+.about-card h2,
+.about-card h3 {
+  text-align: center;
+}
+
+.bullet-list li {
+  font-size: 1.1em; /* Match your paragraph font size */
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
   .about-page {
     padding: 0 10px;
     width: 100%;
@@ -199,17 +450,27 @@ footer.disclaimer {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
   }
 
-  footer.disclaimer {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-    max-width: 95%;
-    bottom: 5px;
+  .about-card h1,
+  .about-card p,
+  .about-card ul,
+  .about-card li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  p, li {
+    font-size: 1em;
+    line-height: 1.6;
   }
 }
 
-/* ========== Landscape Mode ========== */
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .about-page {
     padding: 0 10px;
@@ -221,6 +482,9 @@ footer.disclaimer {
     width: 100%;
     box-sizing: border-box;
     padding: 20px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
   }
 
   .about-card h1,
@@ -237,17 +501,7 @@ footer.disclaimer {
     font-size: 0.95em;
     line-height: 1.6;
   }
-
-  .selection-row {
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .selection-row select,
-  .selection-row button {
-    width: 90%;
-    max-width: 300px;
-  }
 }
+
+
+
