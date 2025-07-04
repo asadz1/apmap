@@ -538,32 +538,4 @@ footer.disclaimer {
     margin: 12px 0;
   }
 
-@media screen and (orientation: landscape) and (max-height: 500px) {
-  .about-page {
-    margin: 80px auto 20px;
-    padding: 0 10px;
-  }
-
-  .about-card {
-    padding: 20px;
-    max-width: 95%;
-    font-size: 0.95rem;
-    box-sizing: border-box;
-  }
-
-  .about-card h1,
-  .about-card h2,
-  .about-card h3 {
-    font-size: 1.4rem;
-    margin-top: 10px;
-  }
-
-  .about-card p,
-  .about-card li {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin: 10px 0;
-  }
-}
-
 
