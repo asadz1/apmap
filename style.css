@@ -567,8 +567,4 @@ footer.disclaimer {
   }
 }
 
-@media screen and (max-width: 950px) {
-  .about-card {
-    padding: 20px;
-  }
-}
+
