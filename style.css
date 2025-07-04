@@ -415,9 +415,9 @@ footer.disclaimer {
   background: #fff;
   border-radius: 12px;
   padding: 20px 24px;
-  margin: 24px auto;
+  width: calc(100% - 32px);
   max-width: 850px;
-  width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
