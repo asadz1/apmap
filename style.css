@@ -415,16 +415,11 @@ footer.disclaimer {
   background: #fff;
   border-radius: 12px;
   padding: 20px 24px;
-<<<<<<< HEAD
   width: calc(100% - 32px);
-=======
-  width: calc(100vw - 48px); /* Subtracts 24px padding on both sides */
->>>>>>> parent of 4473900 (Box fix mobile)
   max-width: 850px;
   margin: 0 auto;
   box-sizing: border-box;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
 }
 
 @media (max-width: 600px) {
@@ -436,8 +431,6 @@ footer.disclaimer {
 .about-inner {
   padding: 20px 24px;
   box-sizing: border-box;
-=======
->>>>>>> parent of 4473900 (Box fix mobile)
 }
 
 .about-card.small {
