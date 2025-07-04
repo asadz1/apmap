@@ -1,5 +1,6 @@
 html, body {
   overflow-x: hidden;
+  background-color: #2a4fa3; /* ✅ NAVBAR BLUE */
 }
 
 body {
