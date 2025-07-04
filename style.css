@@ -502,5 +502,16 @@ footer.disclaimer {
   }
 }
 
+.nav-edge-shim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 1px;
+  background-color: #2a4fa3;
+  z-index: 999;
+  pointer-events: none;
+}
+
 
 
