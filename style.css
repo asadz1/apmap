@@ -475,4 +475,38 @@ footer.disclaimer {
   }
 }
 
+@media (max-width: 600px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container, .content, .main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 15px !important;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.5rem !important;
+    text-align: center;
+    padding: 0 !important;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 1rem !important;
+    line-height: 1.6;
+    padding: 0 !important;
+    margin: 15px 0;
+  }
+
+  img, iframe, video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 
