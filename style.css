@@ -58,7 +58,9 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;                       /* ✅ ADD */
+  right: 0;                      /* ✅ ADD */
+  width: 100vw;                  /* ✅ REPLACE 100% with 100vw */
   padding: 15px 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
