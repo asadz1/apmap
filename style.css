@@ -551,3 +551,7 @@ main.background {
 .centered-text {
   text-align: center;
 }
+
+.centered-list ul {
+  margin-top: 6px;
+}
