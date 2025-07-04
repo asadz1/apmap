@@ -5,7 +5,8 @@ html, body {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url('sandy-beach.svg') center/cover no-repeat, #e0f7fa;
+  background: url('sandy-beach.svg') center/cover no-repeat, #2a4fa3;
+  background-color: #2a4fa3; /* ✅ solid fallback under nav */
   display: flex;
   flex-direction: column;
   align-items: center;
