@@ -437,3 +437,23 @@ footer.disclaimer {
 
 <link rel="stylesheet" href="style.css" />
 
+@media (max-width: 600px) {
+  .about-page {
+    padding: 0 10px;
+  }
+
+  .about-card {
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  p, li {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
+
+
