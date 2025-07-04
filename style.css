@@ -435,19 +435,30 @@ footer.disclaimer {
   line-height: 1.6;
 }
 
-<link rel="stylesheet" href="style.css" />
-
 @media (max-width: 600px) {
   .about-page {
     padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .about-card {
-    padding: 20px;
     width: 100%;
     box-sizing: border-box;
-    word-wrap: break-word;
+    padding: 20px;
     overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+
+  .about-card h1,
+  .about-card p,
+  .about-card ul,
+  .about-card li {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
   }
 
   p, li {
@@ -455,5 +466,6 @@ footer.disclaimer {
     line-height: 1.6;
   }
 }
+
 
 
