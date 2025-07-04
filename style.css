@@ -453,26 +453,4 @@ footer.disclaimer {
   }
 }
 
-@media (max-width: 600px) {
-  .container, .content, .main {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 15px;
-    box-sizing: border-box;
-  }
-
-  h1, h2, h3 {
-    font-size: 1.5rem;
-    padding: 0;
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  p {
-    font-size: 1rem;
-    padding: 0;
-    line-height: 1.6;
-  }
-}
-
 
