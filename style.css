@@ -437,3 +437,20 @@ footer.disclaimer {
 
 <link rel="stylesheet" href="style.css" />
 
+@media (max-width: 600px) {
+  .content {
+    padding: 20px;
+  }
+
+  h1, h2, h3 {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  p {
+    padding: 0 12px;
+    line-height: 1.6;
+  }
+}
+
+
