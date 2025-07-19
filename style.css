@@ -518,3 +518,17 @@ main.background {
 .centered-list ul {
   margin-top: 6px;
 }
+
+.crypto-qr {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0 24px;
+}
+
+.crypto-qr img {
+  max-width: 140px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
