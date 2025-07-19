@@ -307,7 +307,9 @@ footer.disclaimer {
 }
 
 .selection-row select {
-  width: 200px;
+  min-width: 250px;
+  width: 100%;
+  max-width: 300px;
 }
 
 @media (max-width: 600px) {
