@@ -132,10 +132,6 @@ footer.disclaimer {
   margin: 20px auto 10px; 
 }
 
-.container + footer.disclaimer {
-  margin-top: 450px;
-}
-
 /* Short screen fallback */
 @media (max-height: 700px) {
   .container {
