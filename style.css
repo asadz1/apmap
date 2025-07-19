@@ -6,7 +6,7 @@ html, body {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   background: url('sandy-beach.svg') center/cover no-repeat, #2a4fa3;
   background-color: #2a4fa3; /* ✅ solid fallback under nav */
   display: flex;
