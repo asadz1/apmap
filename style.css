@@ -330,14 +330,6 @@ footer.disclaimer {
     max-width: 300px;
   }
 
-  /* Force Reset to span both columns */
-  #reset-button {
-    grid-column: span 2;
-  }
-
-  /* Put exam + score on top row, university + major on second row */
-  #exam-select,
-  #score-select,
   #university-select,
   #major-select {
     margin: 0;
