@@ -121,15 +121,16 @@ footer.disclaimer {
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-size: 0.95rem; 
-  color: #111; 
-  background: rgba(255, 255, 255, 0.85); 
-  padding: 14px 16px;  
+  font-size: 0.8rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
   backdrop-filter: blur(4px);
-  border-radius: 8px;
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
-  max-width: 95%;
-  margin: 20px auto 10px; 
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: auto;
 }
 
 /* Short screen fallback */
@@ -384,7 +385,6 @@ footer.disclaimer {
   max-width: 1000px;
   width: 100%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
 }
 
 .about-card.small {
