@@ -243,7 +243,6 @@ footer.disclaimer {
   margin: 20px auto 10px;
 }
 
-#reset-button,
 #go-button {
   background-color: #2a4fa3;
   color: white;
@@ -257,7 +256,6 @@ footer.disclaimer {
   transition: background-color 0.2s ease;
 }
 
-#reset-button:hover,
 #go-button:hover {
   background-color: #1d3c8c;
 }
