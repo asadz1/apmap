@@ -93,6 +93,13 @@
       link.classList.toggle('active', link.getAttribute('href') === cur);
     });
 
+    // Reset dropdowns to default
+    document.getElementById('reset-button').onclick = () => {
+      document.querySelectorAll('.selection-row select').forEach(s => s.selectedIndex = 0);
+      document.getElementById('major-select').disabled = true;
+      document.getElementById('major-select').innerHTML = '<option disabled selected>Please select a university first</option>';
+    };
+
     // Go button placeholder action
     document.getElementById('go-button').onclick = () => {
       alert('Feature coming soon!');
