@@ -274,7 +274,7 @@ footer.disclaimer {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   flex-direction: row;
   margin: 20px auto;
   max-width: 600px;  
@@ -283,7 +283,7 @@ footer.disclaimer {
 
 .selection-row select,
 .selection-row button {
-  height: 44px;
+  height: 40px;
   font-size: 1em;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -307,11 +307,9 @@ footer.disclaimer {
 }
 
 .selection-row select {
-  min-width: 300px;
+  min-width: 250px;
   width: 100%;
-  max-width: 350px;
-  height: 44px;
-  font-size: 1.05em;
+  max-width: 300px;
 }
 
 @media (max-width: 600px) {
