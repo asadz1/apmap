@@ -375,34 +375,6 @@ footer.disclaimer {
   }
 }
 
-.reset-row,
-.go-row {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto;
-}
-
-.reset-row button,
-.go-row button {
-  background-color: #2a4fa3;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 1em;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease;
-  width: 100%;
-  max-width: 300px;
-}
-
-.reset-row button:hover,
-.go-row button:hover {
-  background-color: #1d3c8c;
-}
-
 .about-page {
   display: flex;
   flex-direction: column;
