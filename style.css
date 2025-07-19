@@ -133,7 +133,7 @@ footer.disclaimer {
 }
 
 .container + footer.disclaimer {
-  margin-top: 450px;
+  margin-top: 500px;
 }
 
 /* Short screen fallback */
