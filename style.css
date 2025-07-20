@@ -471,7 +471,8 @@ footer.disclaimer {
 /* ------------------------------ */
 
 main.background {
-  margin: 100px 0 80px;
+  margin: 100px 0 0; /* REMOVE bottom margin */
+  padding-bottom: 60px; /* ADD this */
 }
 
 .styled-donate-button {
@@ -540,20 +541,19 @@ main.background {
 }
 
 .donate-body footer.disclaimer {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 8px 12px;
   font-size: 1.065rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
-  padding: 8px 12px;
   backdrop-filter: blur(4px);
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
-  margin: 0 auto;
-  margin-top: auto;
-  position: relative;
-  bottom: 10px;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .wrapper {
