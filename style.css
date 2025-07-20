@@ -541,10 +541,14 @@ main.background {
 
 .donate-body footer.disclaimer {
   position: static;
-  margin-top: 30px;       /* space from white box */
-  margin-bottom: 10px;    /* space from bottom of page */
+  margin-top: 40px; /* Enough breathing room */
+  margin-bottom: 20px;
   padding-bottom: 8px;
-  max-width: 90%;         /* same as other pages (to avoid wrapping) */
+  padding-top: 8px;
+  max-width: 1100px;  /* Matches white card width */
+  width: 90%;         /* Makes it flexible */
+  font-size: 1.065rem;
+  line-height: 1.4;
 }
 
 .wrapper {
