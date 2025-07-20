@@ -372,7 +372,7 @@ footer.disclaimer {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin: 120px auto 40px;
+  margin: 120px auto 80px;
   padding: 0 20px;
   width: 100%;
   max-width: 100%;
@@ -471,7 +471,7 @@ footer.disclaimer {
 /* ------------------------------ */
 
 main.background {
-  margin: 100px 0 60px;
+  margin: 100px 0 80px;
 }
 
 .styled-donate-button {
