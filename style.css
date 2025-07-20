@@ -544,13 +544,13 @@ main.background {
   position: relative;
   margin-top: 30px;
   margin-bottom: 30px;
-  padding: 6px 12px; /* slightly reduced to prevent visual overflow */
+  padding: 8px 12px;
   font-size: 1.065rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15); /* less visual "float" */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   text-align: center;
   width: 100%;
