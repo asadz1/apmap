@@ -533,7 +533,7 @@ main.background {
 }
 
 .about-body footer.disclaimer {
-  margin-bottom: 0;
   position: static;
+  margin-bottom: 50px; 
 }
 
