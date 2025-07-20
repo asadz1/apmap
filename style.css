@@ -539,5 +539,12 @@ main.background {
   padding-bottom: 0px;
 }
 
+.donate-body footer.disclaimer {
+  position: static;
+  margin-top: 0px;
+  margin-bottom: -20px;
+  padding-bottom: 0px;
+}
+
 
 
