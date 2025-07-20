@@ -126,8 +126,9 @@ footer.disclaimer {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   max-width: 90%;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 40px; /* 👈 Added this, and removed bottom: 10px */
+  margin-top: auto;
+  position: relative;
+  bottom: 10px;
   width: 100%;
   text-align: center;
 }
