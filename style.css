@@ -546,13 +546,11 @@ main.background {
   padding-bottom: 0px;
 }
 
-.donate-wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px; /* This sets the space between donate-body and the disclaimer */
-  margin-bottom: 30px; /* This controls space from disclaimer to bottom */
 }
 
 
