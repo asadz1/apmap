@@ -2,125 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AP Map – Find Your Credit Path</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate - AP Map</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
-  <!-- ───── NAVIGATION BAR ───── -->
+<body class="donate-body">
   <nav>
     <ul class="navbar">
-      <li><a href="/" class="active">Map</a></li>
+      <li><a href="/">Map</a></li>
       <li><a href="/about-ap-exams.html">About AP Exams</a></li>
-      <li><a href="/donate.html">Donate</a></li>
+      <li><a href="/donate.html" class="active">Donate</a></li>
     </ul>
   </nav>
 
-  <!-- ───── MAIN CARD CONTENT ───── -->
-  <div class="container">
-    <h1>Explore</h1>
-    <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
+  <!-- ✅ WRAPPER START -->
+  <div class="wrapper">
 
-    <div class="selection-row">
-      <select id="university-select">
-  	<option disabled selected>Select University</option>
-  	<option>Adelphi University</option>
-  	<option>Albany College of Pharmacy and Health Sciences</option>
-  	<option>Albany Law School</option>
-  	<option>Alfred State College</option>
-  	<option>Alfred University</option>
-  	<option>Baruch College</option>
-  	<option>Binghamton University (SUNY)</option>
-  	<option>Brooklyn College</option>
-  	<option>Buffalo State University (SUNY)</option>
-  	<option>Canisius University</option>
-  	<option>Colgate University</option>
-  	<option>Columbia University</option>
-  	<option>Cornell University</option>
-  	<option>Daemen University</option>
-  	<option>Dominican University New York</option>
-  	<option>D'Youville University</option>
-  	<option>Elmira College</option>
-  	<option>Fashion Institute of Technology (SUNY)</option>
-  	<option>Fordham University</option>
-  	<option>Hamilton College</option>
-  	<option>Hartwick College</option>
-  	<option>Hobart and William Smith Colleges</option>
-  	<option>Hofstra University</option>
-  	<option>Ithaca College</option>
-  	<option>Le Moyne College</option>
-  	<option>New York University</option>
-  	<option>Pace University</option>
-  	<option>Pratt Institute</option>
-  	<option>Rensselaer Polytechnic Institute</option>
-  	<option>Rochester Institute of Technology</option>
-  	<option>Saint John’s University</option>
-  	<option>Skidmore College</option>
-  	<option>Siena College</option>
-  	<option>St. Bonaventure University</option>
-  	<option>St. John Fisher University</option>
-  	<option>St. Lawrence University</option>
-  	<option>Stony Brook University (SUNY)</option>
-  	<option>Syracuse University</option>
-  	<option>Union College</option>
-  	<option>University at Albany (SUNY)</option>
-  	<option>University at Buffalo (SUNY)</option>
-  	<option>University of Rochester</option>
-  	<option>Utica University</option>
-  	<option>Vassar College</option>
-	</select>
+    <main class="background">
+      <div class="about-card small">
+        <h1>Support AP Map</h1>
+        <p>This project was built to help students understand how their AP credits apply across colleges. If you've found this tool helpful, consider supporting it with a small donation.</p>
 
-      <select id="major-select" disabled>
-        <option disabled selected>Please select a university first</option>
-      </select>
+        <div class="donate-button-row">
+          <a href="https://www.paypal.com/donate/?hosted_button_id=RYU33D5LAVVD8" target="_blank" rel="noopener noreferrer">
+            <button class="styled-donate-button">Donate via PayPal</button>
+          </a>
+        </div>
 
-      <button id="go-button">Go</button>
-    </div>
+        <div class="centered-text">
+          <p>Prefer crypto? Donate with Bitcoin (BTC) or Ethereum (ETH):</p>
+        </div>
+
+        <div class="crypto-qr">
+          <img src="btc-qr.png" alt="BTC QR Code">
+          <img src="eth-qr.png" alt="ETH QR Code" style="margin-left: 20px;">
+        </div>
+
+        <div class="centered-list">
+          <ul>
+            <li><strong>BTC:</strong> bc1q0uk7a5wrdsu3prmpnh9yrc4xdxkw3g2j5dq0tk</li>
+            <li><strong>ETH:</strong> 0xbBA0E5e60D476a79D42fFf6F6E1875A5D294f992</li>
+          </ul>
+        </div>
+
+        <p>Thank you for helping keep this project alive and accessible for all!</p>
+      </div>
+    </main>
+
+    <footer class="disclaimer">
+      AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.
+      <br />
+      While we strive to provide accurate and helpful information, university credit policies may change and often include exceptions or department-level discretion. Always verify all AP credit decisions directly with your university to ensure accuracy.
+    </footer>
+
   </div>
-
-  <!-- ───── DISCLAIMER FOOTER ───── -->
-  <footer class="disclaimer">
-    AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.
-    <br />
-    While we strive to provide accurate and helpful information, university credit policies may change and often include exceptions or department-level discretion. Always verify all AP credit decisions directly with your university to ensure accuracy.
-  </footer>
-
-  <!-- ───── JS LOGIC ───── -->
-  <script>
-    // Highlight active navbar link
-    document.querySelectorAll('.navbar a').forEach(link => {
-      const cur = location.pathname === '/' ? '/' : location.pathname.split('/').pop();
-      link.classList.toggle('active', link.getAttribute('href') === cur);
-    });
-
-    // Go button placeholder action
-    document.getElementById('go-button').onclick = () => {
-      alert('Feature coming soon!');
-    };
-
-    // Dynamic major population
-    const majorsByUni = {
-      "NYU": ["Computer Science", "Film", "Business"],
-      "St. John's University": ["Computer Science", "Biology"],
-      "Harvard University": ["Engineering", "Economics"]
-    };
-
-    const uniSel = document.getElementById('university-select');
-    const majorSel = document.getElementById('major-select');
-
-    uniSel.onchange = () => {
-      const majors = majorsByUni[uniSel.value] || [];
-      if (majors.length) {
-        majorSel.innerHTML = '<option disabled selected>Select Major</option>' +
-          majors.map(m => `<option>${m}</option>`).join('');
-        majorSel.disabled = false;
-      } else {
-        majorSel.innerHTML = '<option disabled selected>No data for this university</option>';
-        majorSel.disabled = true;
-      }
-    };
-  </script>
+  <!-- ✅ WRAPPER END -->
 
 </body>
 </html>
