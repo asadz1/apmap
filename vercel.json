@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/donate", "destination": "/donate.html" },
+    { "source": "/about-ap-exams", "destination": "/about-ap-exams.html" }
+  ]
+}
