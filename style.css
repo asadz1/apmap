@@ -540,11 +540,9 @@ main.background {
 }
 
 .donate-body footer.disclaimer {
-  margin-top: 30px;   /* Match top spacing */
-  margin-bottom: -20px;  /* Shave off extra bottom space */
-  padding-bottom: 0;
+  margin-top: 50px;       
+  margin-bottom: -20px;
 }
-
 
 
 
