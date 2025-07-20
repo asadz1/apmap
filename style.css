@@ -531,8 +531,3 @@ main.background {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.about-card:last-of-type {
-  margin-bottom: 1px;
-}
-
