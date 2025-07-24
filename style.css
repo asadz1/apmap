@@ -558,13 +558,6 @@ main.background {
   text-align: center;
 }
 
-/* Desktop adjustment */
-@media (min-width: 768px) {
-  .donate-body footer.disclaimer {
-    max-width: 94%;
-  }
-}
-
 @media (max-width: 768px) {
   .donate-body footer.disclaimer {
     max-width: 92%;
