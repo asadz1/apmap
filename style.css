@@ -537,12 +537,12 @@ main.background {
   margin-top: 0px;
   margin-bottom: -20px;
   padding: 8px 12px;
-  font-size: 1.03rem;
-  max-width: 92%;
+  font-size: 1.01rem;
+  max-width: 94%;
 }
 
 .donate-body footer.disclaimer {
-  font-size: 0.8rem;
+  font-size: 1.03rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
   padding: 8px 12px;
