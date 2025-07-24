@@ -563,6 +563,8 @@ main.background {
     max-width: 92%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 
@@ -585,12 +587,5 @@ main.background {
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 1000px) {
-  .about-body footer.disclaimer {
-    max-width: 92%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 
 
