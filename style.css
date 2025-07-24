@@ -537,6 +537,8 @@ main.background {
   margin-top: 0px;
   margin-bottom: -20px;
   padding-bottom: 0px;
+  font-size: 1.03rem;
+  max-width: 92%;
 }
 
 .donate-body footer.disclaimer {
