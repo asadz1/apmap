@@ -546,10 +546,10 @@ main.background {
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 12px;
-  max-width: 98%;
+  max-width: 97%;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.01rem;
+  font-size: 1.005rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(4px);
