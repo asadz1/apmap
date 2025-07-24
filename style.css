@@ -536,7 +536,7 @@ main.background {
   position: static;
   margin-top: 0px;
   margin-bottom: -20px;
-  padding: 8px 8px;
+  padding: 8px;
   font-size: 1.01rem;
   max-width: 94%;
 }
