@@ -536,13 +536,13 @@ main.background {
   position: static;
   margin-top: 0px;
   margin-bottom: -20px;
-  padding-bottom: 0px;
-  font-size: 1.025rem;
+  padding: 8px 12px;
+  font-size: 1.03rem;
   max-width: 92%;
 }
 
 .donate-body footer.disclaimer {
-  font-size: 0.95rem;
+  font-size: 1.03rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
   padding: 8px 12px;
