@@ -561,10 +561,9 @@ main.background {
 @media (max-width: 768px) {
   .donate-body footer.disclaimer {
     max-width: 92%;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 12px;
-    padding-right: 12px;
   }
 }
 
