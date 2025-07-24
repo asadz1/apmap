@@ -541,27 +541,37 @@ main.background {
   max-width: 92%;
 }
 
+/* Base style — default for mobile/smaller screens */
 .donate-body footer.disclaimer {
-  position: static;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 12px;
-  max-width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1.01rem;
+  font-size: 0.95rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(4px);
+  padding: 8px 12px;
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: static;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 92%;             /* <<< tighter on mobile */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
-/* Desktop adjustment */
+/* Optional but not necessary if base is 92% already */
+/*
+@media (max-width: 768px) {
+  .donate-body footer.disclaimer {
+    max-width: 92%;
+  }
+}
+*/
+
+/* Desktop: give it more breathing room */
 @media (min-width: 768px) {
   .donate-body footer.disclaimer {
-    max-width: 94%;
+    max-width: 94%;          /* <<< wider on desktop */
   }
 }
 
