@@ -542,14 +542,14 @@ main.background {
 }
 
 .donate-body footer.disclaimer {
-  font-size: 1.03rem;
+  font-size: 1.01rem;
   color: #262626;
   background: rgba(255, 255, 255, 0.5);
   padding: 8px 12px;
   backdrop-filter: blur(4px);
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
-  max-width: 92%;
+  max-width: none;
   width: 100%;
   text-align: center;
   position: relative;
