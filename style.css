@@ -550,11 +550,12 @@ main.background {
   border-radius: 6px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   max-width: 92%;
-  margin-top: 40px;
-  margin-bottom: 0;
   width: 100%;
   text-align: center;
   position: relative;
+  margin-top: 40px;
+  margin-bottom: 0;
+  box-sizing: border-box;
 }
 
 .donate-body main.background {
