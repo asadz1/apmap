@@ -542,17 +542,28 @@ main.background {
 }
 
 .donate-body footer.disclaimer {
-  position: static;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  padding: 12px;
-  max-width: 92%;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.95rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.01rem;
+  color: #262626;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  backdrop-filter: blur(4px);
+  border-radius: 6px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .donate-body footer.disclaimer {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .donate-body main.background {
