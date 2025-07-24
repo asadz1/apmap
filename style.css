@@ -586,5 +586,12 @@ main.background {
   }
 }
 
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .donate-body footer.disclaimer {
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+}
 
 
