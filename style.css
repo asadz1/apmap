@@ -585,4 +585,12 @@ main.background {
   }
 }
 
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  .about-body footer.disclaimer {
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
