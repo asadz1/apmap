@@ -1,0 +1,172 @@
+{
+  "categories": [
+    {
+      "category": "University Core",
+      "courses": [
+        {
+          "code": "ENG 1100",
+          "title": "Lit in a Global Context",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP English Literature",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "FYW 1000",
+          "title": "FYW: English Composition",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP English Language",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "HIS 1000",
+          "title": "Emergence of a Global Society",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP World History",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "PHI 1000",
+          "title": "Philosophy of the Human Person",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Psychology",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "PHI 3000",
+          "title": "Metaphysics",
+          "credits": 3
+        },
+        {
+          "code": "SPE 1000",
+          "title": "Public Speaking",
+          "credits": 3
+        },
+        {
+          "code": "THE 1000",
+          "title": "Perspectives on Christianity",
+          "credits": 3
+        },
+        {
+          "code": "HIS 3375",
+          "title": "Asian American History",
+          "credits": 3
+        },
+        {
+          "code": "PHI 2200",
+          "title": "Ethics",
+          "credits": 3
+        },
+        {
+          "code": "THE 2820",
+          "title": "Intro to Judaism",
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "category": "Liberal Arts and Sciences Core",
+      "courses": [
+        {
+          "code": "MTH 1009",
+          "title": "Calculus I",
+          "credits": 4,
+          "ap_credit": {
+            "exam": "AP Calculus AB or BC",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "SCI XXXX",
+          "title": "Science with Lab",
+          "credits": 4,
+          "ap_credit": {
+            "exam": "AP Biology, Chemistry, or Physics",
+            "min_score": 4
+          }
+        }
+      ]
+    },
+    {
+      "category": "Computer Science Major",
+      "courses": [
+        {
+          "code": "CUS 1115",
+          "title": "Computer Programming Fundamentals I",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Computer Science A",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "CUS 1116",
+          "title": "Computer Programming Fundamentals II",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1151",
+          "title": "Advanced Data Structures",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1162",
+          "title": "Computer Architecture",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1163",
+          "title": "Operating Systems",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1165",
+          "title": "Database Management Systems",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1166",
+          "title": "Software Engineering",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1168",
+          "title": "Theory of Programming Languages",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1172",
+          "title": "Web Application Development",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1174",
+          "title": "Introduction to Artificial Intelligence",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1185",
+          "title": "Data Security and Cryptography",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1186",
+          "title": "Theory of Computation",
+          "credits": 3
+        },
+        {
+          "code": "MTH 1018",
+          "title": "Differential Equations",
+          "credits": 3
+        }
+      ]
+    }
+  ]
+}
