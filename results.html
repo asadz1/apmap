@@ -1,53 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>AP Credit Results</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: sans-serif; padding: 20px; }
-    h2 { margin-top: 2em; border-bottom: 2px solid #ccc; padding-bottom: 0.3em; }
-    .course { margin: 8px 0; padding: 8px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; }
-    .ap-info { color: green; margin-top: 4px; font-size: 0.95em; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>St. John's University – Computer Science Credit Map</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>AP Credit Mapping for Computer Science</h1>
-  <div id="results"></div>
+  <main class="results-container">
+    <h1>St. John's University – B.S. in Computer Science</h1>
 
-  <script>
-    async function loadResults() {
-      const res = await fetch('stjohns-cs.json');
-      const data = await res.json();
-      const container = document.getElementById('results');
+    <section class="category">
+      <h2>Major Area Requirements (36 credits)</h2>
+      <ul>
+        <li>CUS 1115 – Computer Programming Fundamentals I <span class="ap-credit">AP Computer Science A (Score 4+)</span></li>
+        <li>CUS 1116 – Computer Programming Fundamentals II</li>
+        <li>CUS 1126 – Introduction to Data Structures</li>
+        <li>CUS 1151 – Advanced Data Structures</li>
+        <li>CUS 1156 – Software Design Methods</li>
+        <li>CUS 1162 – Computer Architecture</li>
+        <li>CUS 1163 – Operating Systems</li>
+        <li>CUS 1165 – Database Management Systems</li>
+        <li>CUS 1166 – Software Engineering</li>
+        <li>CUS 1168 – Theory of Programming Languages</li>
+        <li>CUS 1185 – Data Security and Cryptography</li>
+        <li>NET 1011 – Networking Fundamentals</li>
+      </ul>
+    </section>
 
-      data.categories.forEach(cat => {
-        const section = document.createElement('section');
-        const h2 = document.createElement('h2');
-        h2.textContent = cat.category;
-        section.appendChild(h2);
+    <section class="category">
+      <h2>Theory Elective (Choose 1)</h2>
+      <ul>
+        <li>CUS 1186 – Theory of Computation</li>
+        <li>CUS 1187 – Finite Automata and Formal Languages</li>
+        <li>CUS 1188 – Analysis of Algorithms</li>
+      </ul>
+    </section>
 
-        cat.courses.forEach(course => {
-          const div = document.createElement('div');
-          div.className = 'course';
-          div.innerHTML = `<strong>${course.code}:</strong> ${course.title} (${course.credits} cr)`;
+    <section class="category">
+      <h2>University Core Requirements (39 credits)</h2>
+      <ul>
+        <li>ENG 1100C – Literature in a Global Context <span class="ap-credit">AP English Literature (Score 4+)</span></li>
+        <li>FYW 1000C – First Year Writing <span class="ap-credit">AP English Language (Score 4+)</span></li>
+        <li>HIS 1000C – Emergence of a Global Society <span class="ap-credit">AP World History (Score 3+)</span></li>
+        <li>PHI 1000C – Philosophy of the Human Person <span class="ap-credit">AP Psychology (Score 3+)</span></li>
+        <li>PHI 3000C – Metaphysics</li>
+        <li>PHI 2200 – Ethics <span class="ap-credit">AP Psychology (Score 3+)</span></li>
+        <li>SPE 1000C – Public Speaking</li>
+        <li>THE 1000C – Perspectives on Christianity <span class="ap-credit">Intro to Judaism accepted</span></li>
+        <li>THE 1040C series – Moral Theology</li>
+        <li>THE Elective – Any Theology <span class="ap-credit">Intro to Judaism accepted</span></li>
+        <li>DNY 1000C – Discover New York</li>
+        <li>ART 1000C or LAC 1000C – Creative Process or Language</li>
+      </ul>
+    </section>
 
-          if (course.ap_credit) {
-            const ap = course.ap_credit;
-            const apEl = document.createElement('div');
-            apEl.className = 'ap-info';
-            apEl.textContent = `✔ Can be fulfilled with a "${ap.exam}" exam (score of ${ap.min_score}+)`;
-            div.appendChild(apEl);
-          }
+    <section class="category">
+      <h2>Liberal Arts and Sciences (32–34 credits)</h2>
+      <h3>Math Requirements (21 credits)</h3>
+      <ul>
+        <li>MTH 1009 – Calculus I <span class="ap-credit">AP Calculus AB/BC (Score 4+)</span></li>
+        <li>MTH 1010 – Calculus II</li>
+        <li>MTH 1013 – Probability & Statistics I</li>
+        <li>MTH 1014 – Probability & Statistics II</li>
+        <li>MTH 1022 – Discrete Mathematics</li>
+        <li>MTH 1018 – Differential Equations</li>
+      </ul>
+      <h3>Science Requirements (8–10 credits)</h3>
+      <ul>
+        <li>One science sequence with lab <span class="ap-credit">AP Biology / Chemistry / Physics (Score 4+)</span></li>
+        <li>Additional lab science as required</li>
+      </ul>
+    </section>
 
-          section.appendChild(div);
-        });
-
-        container.appendChild(section);
-      });
-    }
-
-    loadResults();
-  </script>
+    <footer>
+      <p>This guide maps St. John's University CS program courses to eligible AP exams and minimum scores. Use it to see how AP credits can reduce your degree load.</p>
+    </footer>
+  </main>
 </body>
 </html>
