@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CS AP Credit Mapping – St. John's University</title>
+  <meta name="description" content="APMap helps students discover how their AP Exam scores apply to real college credit based on their university and major.">
+  <link rel="icon" href="/favicon.ico">
+  <title>Donate</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,65 +19,116 @@
     </ul>
   </nav>
 
-  <!-- ───── PAGE HEADER ───── -->
+  <!-- ───── MAIN CARD CONTENT ───── -->
   <div class="container">
-    <h1>St. John's University – Computer Science AP Credit Map</h1>
-    <p>This page shows all required courses for the Computer Science major at St. John’s, grouped by category. If a course has an AP exam that fulfills it, it will be listed alongside the minimum score needed.</p>
+    <h1>Explore</h1>
+    <p>Use the dropdowns below to find out how the AP Exams you took connect to universities.</p>
+
+    <div class="selection-row">
+      <select id="university-select">
+        <option disabled selected>Select University</option>
+        <option>Adelphi University</option>
+        <option>Albany College of Pharmacy and Health Sciences</option>
+        <option>Albany Law School</option>
+        <option>Alfred State College</option>
+        <option>Alfred University</option>
+        <option>Baruch College</option>
+        <option>Binghamton University (SUNY)</option>
+        <option>Brooklyn College</option>
+        <option>Buffalo State University (SUNY)</option>
+        <option>Canisius University</option>
+        <option>Colgate University</option>
+        <option>Columbia University</option>
+        <option>Cornell University</option>
+        <option>Daemen University</option>
+        <option>Dominican University New York</option>
+        <option>D'Youville University</option>
+        <option>Elmira College</option>
+        <option>Fashion Institute of Technology (SUNY)</option>
+        <option>Fordham University</option>
+        <option>Hamilton College</option>
+        <option>Hartwick College</option>
+        <option>Hobart and William Smith Colleges</option>
+        <option>Hofstra University</option>
+        <option>Ithaca College</option>
+        <option>Le Moyne College</option>
+        <option>New York University</option>
+        <option>Pace University</option>
+        <option>Pratt Institute</option>
+        <option>Rensselaer Polytechnic Institute</option>
+        <option>Rochester Institute of Technology</option>
+        <option>Skidmore College</option>
+        <option>Siena College</option>
+        <option>St. Bonaventure University</option>
+        <option>St. John Fisher University</option>
+        <option>St. John's University</option>
+        <option>St. Lawrence University</option>
+        <option>Stony Brook University (SUNY)</option>
+        <option>Syracuse University</option>
+        <option>Union College</option>
+        <option>University at Albany (SUNY)</option>
+        <option>University at Buffalo (SUNY)</option>
+        <option>University of Rochester</option>
+        <option>Utica University</option>
+        <option>Vassar College</option>
+      </select>
+
+      <select id="major-select" disabled>
+        <option disabled selected>Please select a university first</option>
+      </select>
+
+      <button id="go-button">Go</button>
+    </div>
   </div>
 
-  <!-- ───── COURSE OUTPUT ───── -->
-  <div class="container" id="course-output"></div>
-
+  <!-- ───── DISCLAIMER FOOTER ───── -->
   <footer class="disclaimer">
     AP Map is an independent website and is not affiliated with, endorsed by, or associated with the College Board.
     <br />
-    University credit policies may change. Always confirm AP credit decisions with your university advisor.
+    While we strive to provide accurate and helpful information, university credit policies may change and often include exceptions or department-level discretion. Always verify all AP credit decisions directly with your university to ensure accuracy.
   </footer>
 
-  <!-- ───── SCRIPT TO LOAD JSON AND RENDER COURSES ───── -->
+  <!-- ───── JS LOGIC ───── -->
   <script>
-    fetch('stjohns-cs.json')
-      .then(response => response.json())
-      .then(data => {
-        const outputDiv = document.getElementById('course-output');
+    // Highlight active navbar link
+    document.querySelectorAll('.navbar a').forEach(link => {
+      const path = location.pathname.endsWith('/') ? 'index.html' : location.pathname.split('/').pop();
+      link.classList.toggle('active', link.getAttribute('href').includes(path));
+    });
 
-        data.categories.forEach(category => {
-          const catDiv = document.createElement('div');
-          catDiv.classList.add('course-category');
+    // Dynamic major population
+    const majorsByUni = {
+      "NYU": ["Film", "Business"],
+      "St. John's University": ["Computer Science"],
+      "Harvard University": ["Engineering", "Economics"]
+    };
 
-          const catTitle = document.createElement('h2');
-          catTitle.textContent = category.category;
-          catDiv.appendChild(catTitle);
+    const uniSel = document.getElementById('university-select');
+    const majorSel = document.getElementById('major-select');
 
-          category.courses.forEach(course => {
-            const card = document.createElement('div');
-            card.classList.add('course-card');
+    uniSel.onchange = () => {
+      const majors = majorsByUni[uniSel.value] || [];
+      if (majors.length) {
+        majorSel.innerHTML = '<option disabled selected>Select Major</option>' +
+          majors.map(m => `<option>${m}</option>`).join('');
+        majorSel.disabled = false;
+      } else {
+        majorSel.innerHTML = '<option disabled selected>No data for this university</option>';
+        majorSel.disabled = true;
+      }
+    };
 
-            const title = document.createElement('h3');
-            title.textContent = `${course.code} – ${course.title}`;
-            card.appendChild(title);
+    // Go button logic
+    document.getElementById('go-button').onclick = () => {
+      const uni = uniSel.value;
+      const major = majorSel.value;
 
-            const credits = document.createElement('p');
-            credits.textContent = `Credits: ${course.credits}`;
-            card.appendChild(credits);
-
-            if (course.ap_credit) {
-              const ap = document.createElement('p');
-              ap.innerHTML = `<strong>AP Equivalent:</strong> An <em>${course.ap_credit.exam}</em> exam will fulfill this course. The minimum score is <strong>${course.ap_credit.min_score}</strong>.`;
-              card.appendChild(ap);
-              card.classList.add('has-ap');
-            } else {
-              const noAp = document.createElement('p');
-              noAp.innerHTML = `<em>No AP exam credit available for this course.</em>`;
-              card.appendChild(noAp);
-            }
-
-            catDiv.appendChild(card);
-          });
-
-          outputDiv.appendChild(catDiv);
-        });
-      });
+      if (uni === "St. John's University" && major === "Computer Science") {
+        window.location.href = "results.html";
+      } else {
+        alert("Feature coming soon!");
+      }
+    };
   </script>
 
 </body>
