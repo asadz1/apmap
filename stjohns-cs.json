@@ -1,6 +1,4 @@
 {
-  "university": "St. John's University",
-  "major": "Computer Science",
   "categories": [
     {
       "category": "University Core",
@@ -34,7 +32,7 @@
         },
         {
           "code": "PHI 1000",
-          "title": "Phil of the Human Person",
+          "title": "Philosophy of the Human Person",
           "credits": 3,
           "ap_credit": {
             "exam": "AP Psychology",
@@ -81,74 +79,27 @@
           "title": "Calculus I",
           "credits": 4,
           "ap_credit": {
-            "exam": "AP Calculus AB",
+            "exam": "AP Calculus AB or BC",
             "min_score": 4
           }
         },
         {
-          "code": "MTH 1010",
-          "title": "Calculus II",
+          "code": "SCI XXXX",
+          "title": "Science with Lab",
           "credits": 4,
           "ap_credit": {
-            "exam": "AP Calculus BC",
-            "min_score": 4
-          }
-        },
-        {
-          "code": "MTH 1013",
-          "title": "Bio-Statistics",
-          "credits": 3
-        },
-        {
-          "code": "MTH 1014",
-          "title": "Probability and Statistics II",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP Statistics",
-            "min_score": 4
-          }
-        },
-        {
-          "code": "MTH 1022",
-          "title": "Discrete Mathematics",
-          "credits": 3
-        },
-        {
-          "code": "MTH 1011",
-          "title": "Calculus III",
-          "credits": 4
-        },
-        {
-          "code": "MTH 1018",
-          "title": "Differential Equations",
-          "credits": 3
-        },
-        {
-          "code": "ECO 1001",
-          "title": "Principles of Economics I",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP Microeconomics",
-            "min_score": 4
-          }
-        },
-        {
-          "code": "BIO 1000",
-          "title": "Population Biology",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP Biology",
+            "exam": "AP Biology, Chemistry, or Physics",
             "min_score": 4
           }
         }
       ]
     },
     {
-      "category": "Major Requirements",
+      "category": "Computer Science Major",
       "courses": [
         {
           "code": "CUS 1115",
-          "title": "Computer Programming I",
+          "title": "Computer Programming Fundamentals I",
           "credits": 3,
           "ap_credit": {
             "exam": "AP Computer Science A",
@@ -157,50 +108,63 @@
         },
         {
           "code": "CUS 1116",
-          "title": "Computer Programming II",
+          "title": "Computer Programming Fundamentals II",
           "credits": 3
         },
         {
-          "code": "CUS 1126",
-          "title": "Intro to Data Structures",
+          "code": "CUS 1151",
+          "title": "Advanced Data Structures",
           "credits": 3
         },
         {
-          "code": "NET 1011",
-          "title": "Intro to Networks",
+          "code": "CUS 1162",
+          "title": "Computer Architecture",
           "credits": 3
-        }
-      ]
-    },
-    {
-      "category": "Electives and Other",
-      "courses": [
-        {
-          "code": "HIS 1301",
-          "title": "U.S. Colonial Times \u2013 Civil War",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP US History",
-            "min_score": 3
-          }
         },
         {
-          "code": "HIS 1302",
-          "title": "U.S. from Civil War \u2013 Present",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP US History",
-            "min_score": 3
-          }
+          "code": "CUS 1163",
+          "title": "Operating Systems",
+          "credits": 3
         },
         {
-          "code": "PSY 1000",
-          "title": "Intro to Psychology",
-          "credits": 3,
-          "ap_credit": {
-            "exam": "AP Psychology",
-            "min_score": 4
-          }
+          "code": "CUS 1165",
+          "title": "Database Management Systems",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1166",
+          "title": "Software Engineering",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1168",
+          "title": "Theory of Programming Languages",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1172",
+          "title": "Web Application Development",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1174",
+          "title": "Introduction to Artificial Intelligence",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1185",
+          "title": "Data Security and Cryptography",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1186",
+          "title": "Theory of Computation",
+          "credits": 3
+        },
+        {
+          "code": "MTH 1018",
+          "title": "Differential Equations",
+          "credits": 3
         }
       ]
     }
