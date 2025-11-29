@@ -13,67 +13,86 @@
       background: linear-gradient(to bottom, #cbeeff, #ffecd2);
       background-image: url('background.svg');
       background-size: cover;
+      background-position: center;
       color: #222;
     }
 
     h1 {
       text-align: center;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #005fab;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 0 #fff;
     }
 
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       margin-top: 2.5rem;
       border-bottom: 2px solid #444;
-      padding-bottom: 0.3rem;
-    }
-
-    h3 {
-      margin-top: 1.5rem;
-      font-size: 1.2rem;
+      padding-bottom: 0.4rem;
       color: #333;
     }
 
+    h3 {
+      font-size: 1.25rem;
+      margin-top: 1.8rem;
+      color: #1c4c59;
+    }
+
     ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 1rem;
     }
 
     li {
       margin-bottom: 0.6rem;
-      line-height: 1.5;
+      line-height: 1.6;
+      color: #222;
     }
 
     li::before {
-      content: "•";
-      color: #005fab;
-      font-weight: bold;
+      content: "▶";
+      color: #1a73e8;
+      font-size: 0.9rem;
       display: inline-block;
       width: 1em;
       margin-left: -1em;
+      font-weight: bold;
     }
 
     .ap-credit {
-      color: #2c8a4e;
-      font-size: 0.9rem;
-      margin-left: 1rem;
-      display: block;
+      display: inline-block;
+      font-size: 0.88rem;
+      color: #2e7d32;
+      margin-left: 0.5rem;
+      background-color: #e6f4ea;
+      padding: 2px 6px;
+      border-radius: 6px;
     }
 
     .section {
-      background: rgba(255, 255, 255, 0.6);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      margin-top: 1.5rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1.2rem 1.6rem;
+      border-radius: 14px;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .footer {
       font-size: 0.95rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
       text-align: center;
-      color: #444;
+      color: #333;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 1rem;
+      border-radius: 8px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
@@ -83,7 +102,7 @@
   <div class="section">
     <h2>Major Area Requirements (36 credits)</h2>
     <ul>
-      <li>CUS 1115 – Computer Programming Fundamentals I <span class="ap-credit">✓ AP Computer Science A (Score 4+)</span></li>
+      <li>CUS 1115 – Computer Programming Fundamentals I <span class="ap-credit">AP Computer Science A (Score 4+)</span></li>
       <li>CUS 1116 – Computer Programming Fundamentals II</li>
       <li>CUS 1126 – Introduction to Data Structures</li>
       <li>CUS 1151 – Advanced Data Structures</li>
@@ -108,16 +127,16 @@
   <div class="section">
     <h2>University Core Requirements (39 credits)</h2>
     <ul>
-      <li>ENG 1100C – Lit in a Global Context <span class="ap-credit">✓ AP English Literature (Score 4+)</span></li>
-      <li>FYW 1000C – First Year Writing <span class="ap-credit">✓ AP English Language (Score 4+)</span></li>
-      <li>HIS 1000C – Emergence of a Global Society <span class="ap-credit">✓ AP World History (Score 3+)</span></li>
-      <li>PHI 1000C – Philosophy of the Human Person <span class="ap-credit">✓ AP Psychology (Score 3+)</span></li>
+      <li>ENG 1100C – Lit in a Global Context <span class="ap-credit">AP English Literature (Score 4+)</span></li>
+      <li>FYW 1000C – First Year Writing <span class="ap-credit">AP English Language (Score 4+)</span></li>
+      <li>HIS 1000C – Emergence of a Global Society <span class="ap-credit">AP World History (Score 3+)</span></li>
+      <li>PHI 1000C – Philosophy of the Human Person <span class="ap-credit">AP Psychology (Score 3+)</span></li>
       <li>PHI 3000C – Metaphysics</li>
-      <li>PHI 2200 – Ethics <span class="ap-credit">✓ AP Psychology (Score 3+)</span></li>
+      <li>PHI 2200 – Ethics <span class="ap-credit">AP Psychology (Score 3+)</span></li>
       <li>SPE 1000C – Public Speaking</li>
-      <li>THE 1000C – Perspectives on Christianity <span class="ap-credit">✓ Intro to Judaism accepted</span></li>
+      <li>THE 1000C – Perspectives on Christianity <span class="ap-credit">Intro to Judaism accepted</span></li>
       <li>THE 1040C series – Moral Theology</li>
-      <li>THE Elective – <span class="ap-credit">✓ Any Theology / Intro to Judaism accepted</span></li>
+      <li>THE Elective – <span class="ap-credit">Any Theology / Intro to Judaism accepted</span></li>
       <li>DNY 1000C – Discover New York</li>
       <li>ART 1000C or LAC 1000C – Creative Process or Language</li>
     </ul>
@@ -128,7 +147,7 @@
 
     <h3>Math Requirements (21 credits)</h3>
     <ul>
-      <li>MTH 1009 – Calculus I <span class="ap-credit">✓ AP Calculus AB/BC (Score 4+)</span></li>
+      <li>MTH 1009 – Calculus I <span class="ap-credit">AP Calculus AB/BC (Score 4+)</span></li>
       <li>MTH 1010 – Calculus II</li>
       <li>MTH 1013 – Probability & Statistics I</li>
       <li>MTH 1014 – Probability & Statistics II</li>
@@ -138,7 +157,7 @@
 
     <h3>Science Requirements (8–10 credits)</h3>
     <ul>
-      <li>One science sequence with lab <span class="ap-credit">✓ AP Biology / Chemistry / Physics (Score 4+)</span></li>
+      <li>One science sequence with lab <span class="ap-credit">AP Biology / Chemistry / Physics (Score 4+)</span></li>
       <li>Additional lab science as required</li>
     </ul>
   </div>
