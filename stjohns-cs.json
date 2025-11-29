@@ -1,0 +1,208 @@
+{
+  "university": "St. John's University",
+  "major": "Computer Science",
+  "categories": [
+    {
+      "category": "University Core",
+      "courses": [
+        {
+          "code": "ENG 1100",
+          "title": "Lit in a Global Context",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP English Literature",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "FYW 1000",
+          "title": "FYW: English Composition",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP English Language",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "HIS 1000",
+          "title": "Emergence of a Global Society",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP World History",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "PHI 1000",
+          "title": "Phil of the Human Person",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Psychology",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "PHI 3000",
+          "title": "Metaphysics",
+          "credits": 3
+        },
+        {
+          "code": "SPE 1000",
+          "title": "Public Speaking",
+          "credits": 3
+        },
+        {
+          "code": "THE 1000",
+          "title": "Perspectives on Christianity",
+          "credits": 3
+        },
+        {
+          "code": "HIS 3375",
+          "title": "Asian American History",
+          "credits": 3
+        },
+        {
+          "code": "PHI 2200",
+          "title": "Ethics",
+          "credits": 3
+        },
+        {
+          "code": "THE 2820",
+          "title": "Intro to Judaism",
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "category": "Liberal Arts and Sciences Core",
+      "courses": [
+        {
+          "code": "MTH 1009",
+          "title": "Calculus I",
+          "credits": 4,
+          "ap_credit": {
+            "exam": "AP Calculus AB",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "MTH 1010",
+          "title": "Calculus II",
+          "credits": 4,
+          "ap_credit": {
+            "exam": "AP Calculus BC",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "MTH 1013",
+          "title": "Bio-Statistics",
+          "credits": 3
+        },
+        {
+          "code": "MTH 1014",
+          "title": "Probability and Statistics II",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Statistics",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "MTH 1022",
+          "title": "Discrete Mathematics",
+          "credits": 3
+        },
+        {
+          "code": "MTH 1011",
+          "title": "Calculus III",
+          "credits": 4
+        },
+        {
+          "code": "MTH 1018",
+          "title": "Differential Equations",
+          "credits": 3
+        },
+        {
+          "code": "ECO 1001",
+          "title": "Principles of Economics I",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Microeconomics",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "BIO 1000",
+          "title": "Population Biology",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Biology",
+            "min_score": 4
+          }
+        }
+      ]
+    },
+    {
+      "category": "Major Requirements",
+      "courses": [
+        {
+          "code": "CUS 1115",
+          "title": "Computer Programming I",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Computer Science A",
+            "min_score": 4
+          }
+        },
+        {
+          "code": "CUS 1116",
+          "title": "Computer Programming II",
+          "credits": 3
+        },
+        {
+          "code": "CUS 1126",
+          "title": "Intro to Data Structures",
+          "credits": 3
+        },
+        {
+          "code": "NET 1011",
+          "title": "Intro to Networks",
+          "credits": 3
+        }
+      ]
+    },
+    {
+      "category": "Electives and Other",
+      "courses": [
+        {
+          "code": "HIS 1301",
+          "title": "U.S. Colonial Times \u2013 Civil War",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP US History",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "HIS 1302",
+          "title": "U.S. from Civil War \u2013 Present",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP US History",
+            "min_score": 3
+          }
+        },
+        {
+          "code": "PSY 1000",
+          "title": "Intro to Psychology",
+          "credits": 3,
+          "ap_credit": {
+            "exam": "AP Psychology",
+            "min_score": 4
+          }
+        }
+      ]
+    }
+  ]
+}
